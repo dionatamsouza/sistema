@@ -10420,7 +10420,7 @@ a:focus {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.sidebar-dark .nav-item .nav-link:active, .sidebar-dark .nav-item .nav-link:focus, .sidebar-dark .nav-item .nav-link:hover {
+.sidebar-dark .nav-item .nav-link:hover {
   color: #fff;
   background: #333;
 }
