@@ -104,6 +104,7 @@
   <li class="nav-item">
     <a class="nav-link" href="/contratos-arrendamento"><i class="fas fa-fw fa-file-signature"></i><span>Arrendamento</span></a>
   </li>
+  <hr class="sidebar-divider">
   <div class="sidebar-heading">Financeiro</div>
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
