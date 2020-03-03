@@ -3,7 +3,7 @@
 
 
 function listarcontas(){
-	
+  
   
 
 //---------------------------System by Lauro Daniel NETSITES 2020 (45)99933 5708 --------------------------------------------------------
@@ -13,12 +13,12 @@ function listarcontas(){
  
  $tipo=$_GET['tipo'];
   if (is_numeric($tipo)) {
-  	
+    
   $atual=$_SERVER["REQUEST_URI"];
     
   $selecionar = "SELECT * FROM financeiro_contas WHERE tipo='$tipo' AND status='Aberto'";
   try {
-  	 global $bdd;
+     global $bdd;
     $resultado = $bdd->prepare($selecionar);
     
     $resultado->execute();
@@ -58,7 +58,7 @@ function listarcontas(){
     echo $e;
   }
 
-	} // fim de verificar se o parameto passado é um número
+  } // fim de verificar se o parameto passado é um número
 
 }
 
@@ -78,23 +78,23 @@ function listarcontas(){
  
  $idaalterar=$_GET['c'];
   if (is_numeric($idaalterar) AND $idaalterar!='') {
-  	
-  	try {
-  	 global $bdd;
-  	
-  	$statusnovo='Concluído';
-  	
-  	/* Atualização de dados 
-	$atlifsedit = $bdd->prepare("UPDATE financeiro_contas set status = ? WHERE id = ?");
-	$atlifsedit->execute($statusnovo, $idaalterar);
-	/**/
-	
-	$alterar = $bdd->prepare("UPDATE financeiro_contas set status = ? WHERE id = ?");
-	$alterar->bindParam(1,$statusnovo );
+    
+    try {
+     global $bdd;
+    
+    $statusnovo='Concluído';
+    
+    /* Atualização de dados 
+  $atlifsedit = $bdd->prepare("UPDATE financeiro_contas set status = ? WHERE id = ?");
+  $atlifsedit->execute($statusnovo, $idaalterar);
+  /**/
+  
+  $alterar = $bdd->prepare("UPDATE financeiro_contas set status = ? WHERE id = ?");
+  $alterar->bindParam(1,$statusnovo );
 $alterar->bindParam(2,$idaalterar);
 $alterar->execute();
-	
-	}
+  
+  }
   catch(PDOException $e) {
     echo $e;
   }
@@ -138,18 +138,18 @@ $alterar->execute();
 
 
 function listarcaixa(){
-	
+  
   
 
 //---------------------------System by Lauro Daniel NETSITES 2020 (45)99933 5708 --------------------------------------------------------
 
 
-  	
+    
   $atual=$_SERVER["REQUEST_URI"];
     
   $selecionar = "SELECT * FROM caixa";
   try {
-  	 global $bdd;
+     global $bdd;
     $resultado = $bdd->prepare($selecionar);
     
     $resultado->execute();
@@ -167,10 +167,10 @@ function listarcaixa(){
         
         if($tipo=="Entrada"){
         $totalentrada+=$valor;
-				}
-				elseif ($tipo=="Saída"){
-					 $totalsaida+=$valor;
-				}
+        }
+        elseif ($tipo=="Saída"){
+           $totalsaida+=$valor;
+        }
         
          $idconta = $linha['id'];
         
@@ -201,7 +201,7 @@ function listarcaixa(){
     echo $e;
   }
 
-	
+  
 
 }
 
@@ -221,23 +221,23 @@ function listarcaixa(){
  
  $idaalterar=$_GET['c'];
   if (is_numeric($idaalterar) AND $idaalterar!='') {
-  	
-  	try {
-  	 global $bdd;
-  	
-  	$statusnovo='Concluído';
-  	
-  	/* Atualização de dados 
-	$atlifsedit = $bdd->prepare("UPDATE financeiro_contas set status = ? WHERE id = ?");
-	$atlifsedit->execute($statusnovo, $idaalterar);
-	/**/
-	
-	$alterar = $bdd->prepare("UPDATE financeiro_contas set status = ? WHERE id = ?");
-	$alterar->bindParam(1,$statusnovo );
+    
+    try {
+     global $bdd;
+    
+    $statusnovo='Concluído';
+    
+    /* Atualização de dados 
+  $atlifsedit = $bdd->prepare("UPDATE financeiro_contas set status = ? WHERE id = ?");
+  $atlifsedit->execute($statusnovo, $idaalterar);
+  /**/
+  
+  $alterar = $bdd->prepare("UPDATE financeiro_contas set status = ? WHERE id = ?");
+  $alterar->bindParam(1,$statusnovo );
 $alterar->bindParam(2,$idaalterar);
 $alterar->execute();
-	
-	}
+  
+  }
   catch(PDOException $e) {
     echo $e;
   }
