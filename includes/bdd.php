@@ -168,13 +168,13 @@
 
 
     $tipo = '1';
-    $cadinsert = "INSERT into files (iddoimovel, tipo, file, imobiliaria_creci) VALUES (:iddoimovel, :tipo, :file, :imobiliaria_creci)";
+    $cadinsert = "INSERT into files (iddoimovel, tipo, file, file2, imobiliaria_creci) VALUES (:iddoimovel, :tipo, :file, :file2, :imobiliaria_creci)";
     try {
       $cadresult = $bdd->prepare($cadinsert);
       $cadresult->bindParam(':iddoimovel' , $_POST['iddoimovel'], PDO::PARAM_STR);
       $cadresult->bindParam(':tipo' , $tipo, PDO::PARAM_STR);
       $cadresult->bindParam(':file' , $avaliacao, PDO::PARAM_STR);
-      $cadresult->bindParam(':file' , $pericia, PDO::PARAM_STR);
+      $cadresult->bindParam(':file2' , $pericia, PDO::PARAM_STR);
       $cadresult->bindParam(':imobiliaria_creci' , $lgnimobiliaria_creci, PDO::PARAM_STR);
       $cadresult->execute();
       $cadcontar = $cadresult->rowCount();
