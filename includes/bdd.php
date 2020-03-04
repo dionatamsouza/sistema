@@ -152,9 +152,7 @@
     elseif(move_uploaded_file($tmp, 'files/'.$novonome)) {
     }
     $avaliacao = '/files/'.$novonome;
-
-
-    $arquivo2 = $_FILES['avaliacao'];
+    $arquivo2 = $_FILES['pericia'];
     $nome2 = $arquivo2['name'];
     $tmp2 = $arquivo2['tmp_name'];
     $extensao2 = explode('.', $nome2);
@@ -165,8 +163,6 @@
     elseif(move_uploaded_file($tmp2, 'files/'.$novonome2)) {
     }
     $pericia = '/files/'.$novonome2;
-
-
     $tipo = '1';
     $cadinsert = "INSERT into files (iddoimovel, tipo, file, file2, imobiliaria_creci) VALUES (:iddoimovel, :tipo, :file, :file2, :imobiliaria_creci)";
     try {
