@@ -99,7 +99,7 @@
       $cadresult->execute();
       $cadcontar = $cadresult->rowCount();
       if($cadcontar > 0) {
-        echo "Sucesso!";
+        $msgsucess = 'Funcionário foi incluso.';
       }
     }
     catch(PDOException $e) {
@@ -139,6 +139,55 @@
   }
   //-----------------------------------------------------------------------------------
 
+  //Cadastro de avaliação e perícia
+  if(isset($_POST['cadastrar-avaliacao-e-pericia'])) {
+    $arquivo = $_FILES['avaliacao'];
+    $nome = $arquivo['name'];
+    $tmp = $arquivo['tmp_name'];
+    $extensao = explode('.', $nome);
+    $ext = end($extensao);
+    $novonome = md5($nome).'.'.$ext;
+    if(empty($arquivo)) {
+    }
+    elseif(move_uploaded_file($tmp, 'files/'.$novonome)) {
+    }
+    $avaliacao = '/files/'.$novonome;
+
+
+    $arquivo2 = $_FILES['avaliacao'];
+    $nome2 = $arquivo2['name'];
+    $tmp2 = $arquivo2['tmp_name'];
+    $extensao2 = explode('.', $nome2);
+    $ext2 = end($extensao2);
+    $novonome2 = md5($nome2).'.'.$ext2;
+    if(empty($arquivo2)) {
+    }
+    elseif(move_uploaded_file($tmp2, 'files/'.$novonome2)) {
+    }
+    $pericia = '/files/'.$novonome2;
+
+
+    $tipo = '1';
+    $cadinsert = "INSERT into files (iddoimovel, tipo, file, file, imobiliaria_creci) VALUES (:iddoimovel, :tipo, :file, :file, :imobiliaria_creci)";
+    try {
+      $cadresult = $bdd->prepare($cadinsert);
+      $cadresult->bindParam(':iddoimovel' , $_POST['iddoimovel'], PDO::PARAM_STR);
+      $cadresult->bindParam(':tipo' , $tipo, PDO::PARAM_STR);
+      $cadresult->bindParam(':file' , $avaliacao, PDO::PARAM_STR);
+      $cadresult->bindParam(':file' , $pericia, PDO::PARAM_STR);
+      $cadresult->bindParam(':imobiliaria_creci' , $lgnimobiliaria_creci, PDO::PARAM_STR);
+      $cadresult->execute();
+      $cadcontar = $cadresult->rowCount();
+      if($cadcontar > 0) {
+        $msgsucess = 'Avaliação e Perícia foi incluso.';
+      }
+    }
+    catch(PDOException $e) {
+      echo $e;
+    }
+  }
+  //-----------------------------------------------------------------------------------
+
   //Cadastro da auto de vistoria
   if(isset($_POST['cadastrar-auto-de-vistoria'])) {
     $arquivo = $_FILES['file'];
@@ -163,7 +212,7 @@
       $cadresult->execute();
       $cadcontar = $cadresult->rowCount();
       if($cadcontar > 0) {
-        echo "Sucesso!";
+        $msgsucess = 'Auto de vistoria foi incluso.';
       }
     }
     catch(PDOException $e) {
@@ -172,7 +221,7 @@
   }
   //-----------------------------------------------------------------------------------
 
-  //Cadastro da auto de vistoria
+  //Cadastro da contrato de administração
   if(isset($_POST['cadastrar-contrato-de-administracao'])) {
     $arquivo = $_FILES['file'];
     $nome = $arquivo['name'];
@@ -196,7 +245,7 @@
       $cadresult->execute();
       $cadcontar = $cadresult->rowCount();
       if($cadcontar > 0) {
-        echo "Sucesso!";
+        $msgsucess = 'Contrato de administração foi incluso.';
       }
     }
     catch(PDOException $e) {
@@ -205,7 +254,7 @@
   }
   //-----------------------------------------------------------------------------------
 
-  //Cadastro da auto de vistoria
+  //Cadastro da copia do documento do imóvel
   if(isset($_POST['cadastrar-copia-do-documento-do-imovel'])) {
     $arquivo = $_FILES['file'];
     $nome = $arquivo['name'];
@@ -229,7 +278,7 @@
       $cadresult->execute();
       $cadcontar = $cadresult->rowCount();
       if($cadcontar > 0) {
-        echo "Sucesso!";
+        $msgsucess = 'Copia do documento do imóvel foi incluso.';
       }
     }
     catch(PDOException $e) {
@@ -238,7 +287,7 @@
   }
   //-----------------------------------------------------------------------------------
 
-  //Cadastro da auto de vistoria
+  //Cadastro da Copia do documento do proprietário
   if(isset($_POST['cadastrar-copia-do-documento-do-proprietario'])) {
     $arquivo = $_FILES['file'];
     $nome = $arquivo['name'];
@@ -262,7 +311,7 @@
       $cadresult->execute();
       $cadcontar = $cadresult->rowCount();
       if($cadcontar > 0) {
-        echo "Sucesso!";
+        $msgsucess = 'Copia do documento do proprietário foi incluso.';
       }
     }
     catch(PDOException $e) {
