@@ -168,7 +168,7 @@
 
 
     $tipo = '1';
-    $cadinsert = "INSERT into files (iddoimovel, tipo, file, file, imobiliaria_creci) VALUES (:iddoimovel, :tipo, :file, :file, :imobiliaria_creci)";
+    $cadinsert = "INSERT into files (iddoimovel, tipo, file, imobiliaria_creci) VALUES (:iddoimovel, :tipo, :file, :imobiliaria_creci)";
     try {
       $cadresult = $bdd->prepare($cadinsert);
       $cadresult->bindParam(':iddoimovel' , $_POST['iddoimovel'], PDO::PARAM_STR);
