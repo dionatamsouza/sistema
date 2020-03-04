@@ -9,8 +9,8 @@
       if($omscontar>0) {
         while($omsmost = $omsresult->FETCH(PDO::FETCH_OBJ)) {
           $omsid = $omsmost->id;
-          $omsavaliacao = $omsmost->avaliacao;
-          $omspericia = $omsmost->pericia;
+          $omsavaliacao = $omsmost->file;
+          $omspericia = $omsmost->file2;
   ?>
           <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-info shadow h-100 py-2">
