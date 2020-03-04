@@ -130,7 +130,7 @@
       $cadresult->execute();
       $cadcontar = $cadresult->rowCount();
       if($cadcontar > 0) {
-        echo "Sucesso!";
+        $msgsucess = 'Sucesso! Seu contrato foi incluso.';
       }
     }
     catch(PDOException $e) {
