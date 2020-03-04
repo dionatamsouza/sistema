@@ -13,6 +13,16 @@
         	</div>
         	<div class="row">
             	<div class="col-lg-6">
+<?php
+                  if(isset($msgsucess)) {
+?>
+                    <div class="alert alert-success alert-dismissible">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close" title="Fechar">×</a>
+                      <strong>Sucesso!</strong> <?php echo $msgsucess; ?>
+                    </div>
+<?php
+                  }
+?>
               		<div class="card shadow mb-4">
                 		<div class="card-body">
                 			<form class="user" method="POST" enctype="multipart/form-data">
