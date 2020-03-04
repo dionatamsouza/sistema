@@ -1,7 +1,7 @@
 <?php
   if(isset($_GET['searchiddoimovel'])) {
     $iddoimovel = $_GET['iddoimovel'];
-    $omsselect = "SELECT * from avaliacaoepericia WHERE iddoimovel=$iddoimovel";
+    $omsselect = "SELECT * from files WHERE iddoimovel=$iddoimovel AND tipo='1' AND imobiliaria_creci=$lgnimobiliaria_creci";
     try {
       $omsresult = $bdd->prepare($omsselect);
       $omsresult->execute();
@@ -51,7 +51,7 @@
   <?php
           if(isset($_POST['avaliacaoepericia'.$omsid])) {
             unlink($omsfile);
-            $vercodeeas = $bdd->prepare('DELETE FROM avaliacaoepericia WHERE id=:id');
+            $vercodeeas = $bdd->prepare('DELETE FROM files WHERE id=:id');
             $vercodeeas->bindParam(':id', $omsid);
             $vercodeeas->execute();
             header("Refresh: 0");
