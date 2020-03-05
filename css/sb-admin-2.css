@@ -4338,10 +4338,6 @@ input[type="button"].btn-block {
   border-radius: 0.35rem;
 }
 
-.card:hover, .card:focus {
-    transform: scale(1.05);
-}
-
 .card > hr {
   margin-right: 0;
   margin-left: 0;
