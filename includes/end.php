@@ -21,7 +21,7 @@
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>]
 <script src="js/sb-admin-2.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="calendario/js/bootstrap-datepicker.min.js"></script> 
 <script src="calendario/js/bootstrap-datepicker.pt-BR.min.js" charset="UTF-8"></script>
