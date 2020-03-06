@@ -50,22 +50,22 @@
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-12">
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">Data</th>
-                      <th scope="col">Valor</th>
-                      <th scope="col">Quem</th>
-                      <th scope="col">Tipo</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php listarcaixa(); ?>   
-                  </tbody>
-                </table>
-              </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Data</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Quem</th>
+                    <th scope="col">Tipo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php listarcaixa(); ?>   
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
