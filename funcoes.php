@@ -16,10 +16,8 @@ ini_set("max_execution_time", -1 );
 
 // Conversor de datas
 
-$defaultTimeZone='UTC';
-if(date_default_timezone_get()!=$defaultTimeZone)) date_default_timezone_set($defaultTimeZone);
 
-// somewhere in the code
+
 function _date($format="r", $timestamp=false, $timezone=false)
 {
     $userTimezone = new DateTimeZone(!empty($timezone) ? $timezone : 'GMT');
