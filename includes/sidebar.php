@@ -152,7 +152,7 @@
       <div class="bg-white py-2 collapse-inner rounded">
         <a class="collapse-item" href="aaa">Incluir entrada</a>
         <a class="collapse-item" href="aaa">Incluir saída</a>
-        <a class="collapse-item" href="aaa">Relatórios</a>
+        <a class="collapse-item" href="/caixa">Relatórios</a>
       </div>
     </div>
   </li>
