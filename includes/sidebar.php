@@ -104,7 +104,6 @@
   <li class="nav-item">
     <a class="nav-link" href="/contratos-arrendamento"><i class="fas fa-fw fa-file-signature"></i><span>Arrendamento</span></a>
   </li>
-  <hr class="sidebar-divider">
   <div class="sidebar-heading">Financeiro</div>
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
@@ -128,6 +127,11 @@
         <a class="collapse-item" href="aaa">Gerar boletos de alugueis</a>
         <a class="collapse-item" href="aaa">Gerar boleto avulso</a>
         <a class="collapse-item" href="aaa">Listar Boletos</a>
+        
+        <a class="collapse-item" href="incluir-cliente">Incluir Cliente</a>
+        
+         <a class="collapse-item" href="listar-clientes">Listar Cientes</a>
+        
       </div>
     </div>
   </li>
@@ -150,9 +154,9 @@
     </a>
     <div id="collapseUtilities4" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="aaa">Incluir entrada</a>
-        <a class="collapse-item" href="aaa">Incluir saída</a>
-        <a class="collapse-item" href="/caixa">Relatórios</a>
+        <a class="collapse-item" href="incluir-entrada">Incluir entrada</a>
+        <a class="collapse-item" href="incluir-saida">Incluir saída</a>
+        <a class="collapse-item" href="caixa.php">Relatórios</a>
       </div>
     </div>
   </li>
