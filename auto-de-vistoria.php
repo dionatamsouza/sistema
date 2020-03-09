@@ -22,7 +22,7 @@
             </form>
           </div>
           <div class="row">
-            <?php include_once("includes/listar-autodevistoria.php"); ?>
+            <?php listarautodevistoria(); ?>
           </div>
         </div>
       </div>
