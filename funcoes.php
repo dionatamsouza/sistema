@@ -377,5 +377,5 @@ function TestaCPF(strCPF) {
     return true;
 }
 var strCPF = "12345678909";
-alert(TestaCPF(strCPF));
+//alert(TestaCPF(strCPF));
 </script>
