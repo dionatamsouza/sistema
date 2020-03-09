@@ -160,6 +160,22 @@
       </div>
     </div>
   </li>
+  
+  
+  
+  
+   <li class="nav-item">
+    <a class="nav-link" href="alugar-imovel"><i class="fas fa-fw fa-home"></i><span>Alugar Imóvel</span></a>
+  </li>
+  
+  
+   <li class="nav-item">
+    <a class="nav-link" href="desalugar-imovel" ><i class="fas fa-fw fa-home"></i><span>Desalugar Imóvel</span></a>
+  </li>
+  
+  
+  
+  
   <hr class="sidebar-divider d-none d-md-block">
   <div class="text-center d-none d-md-inline">
     <button class="rounded-circle border-0" id="sidebarToggle"></button>
