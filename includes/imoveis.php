@@ -12,7 +12,7 @@
             $omsid = $omsmost->id;
             $omstitulo = $omsmost->titulo;
             $omsdescricao = $omsmost->descricao;
-            if($omsmost->tipo == '1') { $omstiponome = 'Locação'; } elseif($omsmost->tipo == '2') { $omstiponome = 'Venda'; } elseif($omsmost->tipo == '3') { $omstiponome = 'Rural'; }
+            if($omsmost->tipo == '1') { $omstipo = 'Locação'; } elseif($omsmost->tipo == '2') { $omstipo = 'Venda'; } elseif($omsmost->tipo == '3') { $omstipo = 'Rural'; }
             $omstipodepropriedade = $omsmost->tipo_de_propriedade;
             $omsendereco = $omsmost->endereco;
             $omsvalor = $omsmost->valor;
@@ -33,7 +33,7 @@
                   <hr class="sidebar-divider">
                   <p><strong>ID do anúncio:</strong> <?php echo $omsid; ?></p>
                   <hr class="sidebar-divider">
-                  <p><strong>Tipo:</strong> <?php echo $omstiponome; ?></p>
+                  <p><strong>Tipo:</strong> <?php echo $omstipo; ?></p>
                   <hr class="sidebar-divider">
                   <p><strong>Tipo de propriedade:</strong> <?php echo $omstipodepropriedade; ?></p>
                   <hr class="sidebar-divider">
