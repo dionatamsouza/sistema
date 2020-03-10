@@ -344,7 +344,7 @@
       $cadresult->bindParam(':numero_de_dormitorios' , $_POST['numerodedormitorios'], PDO::PARAM_STR);
       $cadresult->bindParam(':area_construida' , $_POST['areaconstruida'], PDO::PARAM_STR);
       $cadresult->bindParam(':area_terreno_total' , $_POST['areaterrenototal'], PDO::PARAM_STR);
-      $cadresult->bindParam(':fotoimovel' , $dstimg, PDO::PARAM_STR);
+      $cadresult->bindParam(':foto_imovel' , $dstimg, PDO::PARAM_STR);
       $cadresult->bindParam(':imobiliaria_creci' , $lgnimobiliaria_creci, PDO::PARAM_STR);
       $cadresult->execute();
       $cadcontar = $cadresult->rowCount();
