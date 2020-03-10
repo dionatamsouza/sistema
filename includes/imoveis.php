@@ -36,8 +36,8 @@
                   <p><strong>Endereço:</strong> <?php echo $omsendereco; ?></p>
                   <p><strong>Valor:</strong> <?php echo $omsvalor; ?></p>
                   <p><strong>Número de dormitórios:</strong> <?php echo $omsnumerodedormitorios; ?></p>
-                  <p><strong>Área construída:</strong> <?php echo $omsareaconstruida; ?></p>
-                  <p><strong>Área terreno/total:</strong> <?php echo $omsareaterrenototal; ?></p>
+                  <p><strong>Área construída:</strong> <?php echo $omsareaconstruida; ?> m²</p>
+                  <p><strong>Área terreno/total:</strong> <?php echo $omsareaterrenototal; ?> m²</p>
                 </div>
               </div>
             </div>
