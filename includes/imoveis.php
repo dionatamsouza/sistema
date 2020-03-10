@@ -2,8 +2,6 @@
   if(isset($_GET['imoveis'])) {
     $imoveis = $_GET['imoveis'];
     if(!empty($imoveis)) {
-
-
       $omsselect = "SELECT * from imoveis WHERE tipo=$tipopage AND imobiliaria_creci=$lgnimobiliaria_creci";
       try {
         $omsresult = $bdd->prepare($omsselect);
@@ -16,7 +14,7 @@
             $omsdescricao = $omsmost->descricao;
             $omsfotoimovel = $omsmost->foto_imovel;
   ?>
-            <div class="col-lg-6">
+            <div class="col-lg-9">
               <div class="card shadow mb-4">
                 <a class="btn-trash" href="aaaa"><i class="fas fa-times"></i></a>
                 <img src="<?php echo $omsfotoimovel; ?>" width="100%">
@@ -40,6 +38,15 @@
                 </div>
               </div>
             </div>
+            <div class="col-lg-3">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Calculadora</h6>
+                </div>
+                <div class="card-body">
+                </div>
+              </div>
+            </div>
   <?php
           }
         }
@@ -47,30 +54,6 @@
       catch(PDOException $e) {
         echo $e;
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
     else {
       header("Location: /");
