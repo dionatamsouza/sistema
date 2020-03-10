@@ -22,9 +22,9 @@
           $omsfotoimovel = $omsmost->foto_imovel;
 ?>
           <div class="col-lg-3">
-            <a href="?imoveis=<?php echo $omsid; ?>">
-              <div class="card shadow mb-4">
-                <a class="btn-trash" href="aaaa"><i class="fas fa-times"></i></a>
+            <div class="card shadow mb-4">
+              <a class="btn-trash" href="aaaa"><i class="fas fa-times"></i></a>
+              <a href="?imoveis=<?php echo $omsid; ?>">
                 <img src="<?php echo $omsfotoimovel; ?>" width="100%">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary"><?php echo $omstitulo; ?></h6>
@@ -45,7 +45,7 @@
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
 <?php
         }
