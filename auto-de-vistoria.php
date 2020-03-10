@@ -14,7 +14,7 @@
               <div class="input-group">
                 <input type="text" class="form-control small" placeholder="ID do imóvel..." aria-label="Search" aria-describedby="basic-addon2" name="iddoimovel" autofocus>
                 <div class="input-group-append">
-                  <button class="btn btn-primary" type="submit" name="searchiddoimovel">
+                  <button class="btn btn-primary" type="submit">
                     <i class="fas fa-search fa-sm"></i>
                   </button>
                 </div>
