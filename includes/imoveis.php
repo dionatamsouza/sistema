@@ -56,6 +56,16 @@
             <div class="col-lg-3">
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Informações Gerais</h6>
+                </div>
+                <div class="card-body">
+                  <p><i class="fas fa-comment-dollar"></i> <?php echo $omsvalor; ?></p>
+                  <hr class="sidebar-divider">
+                  <p><i class="fas fa-map-marker-alt"></i> <?php echo $omsendereco; ?></p>
+                </div>
+              </div>
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Arquivos anexos</h6>
                 </div>
                 <div class="card-body">
@@ -64,16 +74,6 @@
                   <a href="/copia-do-documento-do-imovel?id=<?php echo $omsid; ?>" class="btn btn-light btn-user btn-block border">Cópia do documento do imóvel</a>
                   <a href="/copia-do-documento-do-proprietario?id=<?php echo $omsid; ?>" class="btn btn-light btn-user btn-block border">Cópia do documento do proprietário</a>
                   <a href="/contrato-de-administracao?id=<?php echo $omsid; ?>" class="btn btn-light btn-user btn-block border">Contrato de administração</a>
-                </div>
-              </div>
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Informações Gerais</h6>
-                </div>
-                <div class="card-body">
-                  <p><i class="fas fa-comment-dollar"></i> <?php echo $omsvalor; ?></p>
-                  <hr class="sidebar-divider">
-                  <p><i class="fas fa-map-marker-alt"></i> <?php echo $omsendereco; ?></p>
                 </div>
               </div>
               <div class="card shadow mb-4">
