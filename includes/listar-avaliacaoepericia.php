@@ -67,6 +67,6 @@
     }
   }
   else {
-      echo '<div class="ml-md-3">Nada encontrado..</div>';
+      header("Location: /");
   }
 ?>
