@@ -75,6 +75,9 @@
   <?php
           }
         }
+        else {
+          header("Location: /");
+        }
       }
       catch(PDOException $e) {
         echo $e;
