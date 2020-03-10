@@ -27,7 +27,7 @@
                 		<div class="card-body">
                       <form class="user" method="POST" enctype="multipart/form-data">
 				              	<div class="form-group">
-                          <input type="text" class="form-control form-control-user" placeholder="Id do imóvel" name="iddoimovel" required>
+                          <input type="text" class="form-control form-control-user"<?php if(isset($_GET['id'])) { ?> value="<?php echo $_GET['id']; ?>" <?php } ?> placeholder="Id do imóvel" name="iddoimovel" required>
                         </div>
                         <div class="form-group">
                           <label>Avaliação</label>
