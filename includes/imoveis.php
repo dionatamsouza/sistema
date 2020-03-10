@@ -44,7 +44,7 @@
                     <p><i class="fas fa-car"></i> 4</p>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 <?php
