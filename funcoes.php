@@ -1,6 +1,4 @@
-<?php include_once("includes/bdd.php"); 
-
-
+<?php include_once("includes/head.php"); 
 
 
 //---------------------------System by Lauro Daniel NETSITES 2020 (45)99933 5708 --------------------------------------------------------
@@ -90,7 +88,7 @@ function listarcontas(){
   	
   $atual=$_SERVER["REQUEST_URI"];
     
-  $selecionar = "SELECT * FROM financeiro_contas WHERE tipo='$tipo' AND status='Aberto'";
+  $selecionar = "SELECT * FROM financeiro_contas WHERE tipo='$tipo' AND status='Aberto' AND imobiliaria_creci='$lgnimobiliaria_creci'";
   try {
   	 global $bdd;
     $resultado = $bdd->prepare($selecionar);
@@ -184,13 +182,6 @@ $alterar->execute();
 // FUNÇÃO GERAR BOLETO AVULSO
 
 //---------------------------System by Lauro Daniel NETSITES 2020 (45)99933 5708 --------------------------------------------------------
-
-
-
-
-
-
-
 
 
 
@@ -350,6 +341,89 @@ function Redimensionarjpeg($imagemred, $name, $largura, $pasta){
 
 
 
+
+function selectImoveis () {
+	 global $lgnimobiliaria_creci;
+  	
+	
+	 $selecionar = "SELECT * FROM imoveis WHERE imobiliaria_creci='$lgnimobiliaria_creci' ORDER BY id ASC";
+  try {
+  	 global $bdd;
+    $resultado = $bdd->prepare($selecionar);
+    
+    $resultado->execute();
+    $entcontados = $resultado->rowCount();
+    
+   
+    
+    if($entcontados > 0) {
+      $loop = $resultado->fetchAll();
+      
+      echo "<select class='form-control form-control-user select' name='imovel'>	<option value=''>Escolha o Imóvel</option>";
+      
+      
+      
+      foreach($loop as $linha) {
+        $idimovel = $linha['id'];
+        $nomeimovel=$linha['titulo'];
+        
+        echo "<option value='$idimovel'>$idimovel > $nomeimovel</option>";
+        
+}
+}
+echo "</select>";
+}
+
+catch(PDOException $e) {
+    echo $e;
+  }
+		
+}
+
+
+
+
+
+
+
+
+
+function selectCliente () {
+	 global $lgnimobiliaria_creci;
+  	
+	$selecionar = "SELECT * FROM financeiro_clientes WHERE imobiliaria_creci='$lgnimobiliaria_creci' ORDER BY nome ASC";
+  try {
+  	 global $bdd;
+    $resultado = $bdd->prepare($selecionar);
+    
+    $resultado->execute();
+    $entcontados = $resultado->rowCount();
+    
+   
+    
+    if($entcontados > 0) {
+      $loop = $resultado->fetchAll();
+      
+      echo "<select class='form-control form-control-user select' name='cliente'>	<option value=''>Escolha o Cliente</option>";
+      
+      
+      
+      foreach($loop as $linha) {
+        $idcliente = $linha['id'];
+        $nome=$linha['nome'];
+        
+        echo "<option value='$idcliente'>$nome</option>";
+        
+}
+}
+echo "</select>";
+}
+
+catch(PDOException $e) {
+    echo $e;
+  }
+		
+}
  
 
 
