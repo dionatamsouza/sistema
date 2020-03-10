@@ -17,6 +17,8 @@ $endereco_complemento=  $_POST['endereco_complemento'];
 $telefone=  $_POST['telefone'];
 $codigo_ibge=  $_POST['codigo_ibge'];
 $cep=  $_POST['cep'];
+$email=  $_POST['email'];
+$whatsapp=  $_POST['whatsapp'];
 
 $tiraponto = array(".");
 $trocarvirgula = array(",");
