@@ -106,16 +106,19 @@
                 </div>
                 <div class="card-body">
                   <p><strong>Descrição:</strong> <?php echo $omsdescricao; ?></p>
-                  <div class="col-md-3 d-inline-flex">
+                  <div class="col-md-2 d-inline-flex text-center">
                     <p><i class="fas fa-bed"></i> 4</p>
                   </div>
-                  <div class="col-md-3 d-inline-flex">
+                  <div class="col-md-2 d-inline-flex text-center">
                     <p><i class="fas fa-bath"></i> 4</p>
                   </div>
-                  <div class="col-md-3 d-inline-flex">
+                  <div class="col-md-2 d-inline-flex text-center">
                     <p><i class="fas fa-swimming-pool"></i> 4</p>
                   </div>
-                  <div class="col-md-3 d-inline-flex">
+                  <div class="col-md-2 d-inline-flex text-center">
+                    <p><i class="fas fa-car"></i> 4</p>
+                  </div>
+                  <div class="col-md-2 d-inline-flex text-center">
                     <p><i class="fas fa-car"></i> 4</p>
                   </div>
                 </div>
