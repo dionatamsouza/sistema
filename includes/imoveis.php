@@ -4,6 +4,9 @@
     if(!empty($imoveis)) {
       echo "teste";
     }
+    else {
+      header("Location: /");
+    }
   }
   else {
     $omsselect = "SELECT * from imoveis WHERE tipo=$tipopage AND imobiliaria_creci=$lgnimobiliaria_creci";
