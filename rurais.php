@@ -9,7 +9,7 @@
         <?php include_once("includes/topbar.php"); ?>
         <div class="container-fluid">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <?php if(!isset($_GET['imoveis'])) { ?><h1 class="h3 mb-0 text-gray-800">Rurais (<?php echo $omscontar; ?>)</h1><?php } ?>
+            <?php if(!isset($_GET['imoveis'])) { ?><h1 class="h3 mb-0 text-gray-800">Rurais</h1><?php } ?>
           </div>
           <div class="row">
             <?php $tipopage = '3'; include_once("includes/imoveis.php"); ?>
