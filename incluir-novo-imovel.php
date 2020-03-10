@@ -87,7 +87,7 @@
 				                  	</div>
 				                 </div>
 				                 <div class="form-group">
-				                  	<input type="file" class="form-control form-control-user select" name="fotoanuncio" required>
+				                  	<input type="file" class="form-control form-control-user select" name="fotoimovel" required>
 				                </div>
 				              	<input type="submit" name="cadastrar-imovel" class="btn btn-primary btn-user btn-block" value="Cadastrar imóvel">
 				            </form>
