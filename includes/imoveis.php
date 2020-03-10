@@ -12,7 +12,7 @@
             $omsid = $omsmost->id;
             $omstitulo = $omsmost->titulo;
             $omsdescricao = $omsmost->descricao;
-            $omstipo = $omsmost->tipo;
+            if($omsmost->tipo == '1') { $omstipo = 'Locação'; } elseif($omsmost->tipo == '2') { $omstipo = 'Venda'; } elseif($omsmost->tipo == '3') { $omstipo = 'Rural'; }
             $omstipodepropriedade = $omsmost->tipo_de_propriedade;
             $omsendereco = $omsmost->endereco;
             $omsvalor = $omsmost->valor;
