@@ -48,15 +48,16 @@
 				                  	<div class="col-sm-4 mb-3 mb-sm-0">
 				                    	<select class="form-control form-control-user select" name="pais" required>
 					                		<option value>Selecione o país</option>
+					                		<option value="1" selected>Brasil</option>
 					                	</select>
 				                  	</div>
 				                  	<div class="col-sm-4">
-				                    	<select class="form-control form-control-user select" name="estado" required>
-					                		<option value>Selecione o estado</option>
-					                	</select>
+				                  		<select class="form-control form-control-user select" name="estado" id="uf" disabled data-target="#cidade">
+									        <option value="">Estado</option>
+									    </select>
 				                  	</div>
 				                  	<div class="col-sm-4">
-				                    	<select class="form-control form-control-user select" name="municipio" required>
+				                    	<select class="form-control form-control-user select" name="municipio" id="cidade" disabled required>
 					                		<option value>Selecione o município</option>
 					                	</select>
 				                  	</div>
