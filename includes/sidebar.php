@@ -70,7 +70,7 @@
     <a class="nav-link" href="/incluir-novo-funcionario"><i class="fas fa-fw fa-user"></i><span>Incluir novo funcionário</span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/incluir-novo-imovel" target="_Blank"><i class="fas fa-fw fa-home"></i><span>Incluir novo imóvel</span></a>
+    <a class="nav-link" href="/incluir-novo-imovel"><i class="fas fa-fw fa-home"></i><span>Incluir novo imóvel</span></a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/incluir-novo-contrato"><i class="fas fa-fw fa-file-signature"></i><span>Incluir novo contrato</span></a>
