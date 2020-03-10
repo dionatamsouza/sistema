@@ -51,9 +51,9 @@
     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Imóveis:</h6>
-        <a class="collapse-item" href="<?php echo $gerenciador_site; ?>/search?country=0&region=0&city%5B%5D=0&apType=1&objType=0&do-term-search=0&sApId=" target="_Blank">Locação</a>
-        <a class="collapse-item" href="<?php echo $gerenciador_site; ?>/search?country=0&region=0&city%5B%5D=0&apType=2&objType=0&do-term-search=0&sApId=" target="_Blank">Venda</a>
-        <a class="collapse-item" href="<?php echo $gerenciador_site; ?>/search?country=0&region=0&city%5B%5D=0&apType=2&objType=31&do-term-search=0&sApId=" target="_Blank">Rurais</a>
+        <a class="collapse-item" href="/locacao">Locação</a>
+        <a class="collapse-item" href="/venda">Venda</a>
+        <a class="collapse-item" href="/rurais">Rurais</a>
         <hr class="sidebar-divider">
         <h6 class="collapse-header">Outros:</h6>
         <a class="collapse-item" href="/avaliacao-e-pericia" >Avaliação e Perícia</a>
