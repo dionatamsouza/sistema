@@ -12,7 +12,7 @@
             <h1 class="h3 mb-0 text-gray-800">Locação</h1>
           </div>
           <div class="row">
-            <?php $tipopage = '1'; include_once("includes/locacao.php"); ?>
+            <?php $tipopage = '1'; include_once("includes/imoveis.php"); ?>
           </div>
         </div>
       </div>
