@@ -15,9 +15,4 @@
 	<script src="calendario/js/bootstrap-datepicker.pt-BR.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="js/estadoemunicipio.js"></script>
 	<script type="text/javascript" src="js/jquery.maskMoney.js"></script>
-	<script type="text/javascript">
-		$(function() {
-			$("#demo4").maskMoney({symbol:'R$ ', showSymbol:true, thousands:'.', decimal:',', symbolStay: true});
-		})
-	</script>
 </head>

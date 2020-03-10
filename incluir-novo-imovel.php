@@ -67,6 +67,11 @@
 				                </div>
 				                <div class="form-group">
 				                  	<input id="valor" type="text" class="form-control form-control-user" placeholder="Valor" name="valor" required>
+				                  	<script type="text/javascript">
+		$(function() {
+			$("#demo4").maskMoney({symbol:'R$ ', showSymbol:true, thousands:'.', decimal:',', symbolStay: true});
+		})
+	</script>
 				                </div>
 				                <div class="form-group">
 				                  	<input type="text" class="form-control form-control-user" placeholder="Título" name="titulo" required>
