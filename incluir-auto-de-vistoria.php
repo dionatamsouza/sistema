@@ -28,7 +28,7 @@
                 			<form class="user" method="POST" enctype="multipart/form-data">
 				              	<div class="form-group row">
 				              		<div class="col-sm-6 mb-3 mb-sm-0">
-					                	<input type="text" class="form-control form-control-user" placeholder="Id do imóvel" name="iddoimovel" required>
+					                	<input type="text" class="form-control form-control-user"<?php if(isset($_GET['id'])) { ?> value="<?php echo $_GET['id']; ?>" <?php } ?> placeholder="Id do imóvel" name="iddoimovel" required>
 					                </div>
 					                <div class="col-sm-6">
 				                    	<input type="file" class="form-control form-control-user select" name="file" required>
