@@ -111,7 +111,19 @@
 					               
 					                
 				              	</div>		              				     
-				              	
+			
+		<div class="form-group row">
+				              		<div class="col-sm-6 mb-3 mb-sm-0">
+					                	<input type="text" class="form-control form-control-user" placeholder="E-mail" name="email" type="text">
+					                </div>
+					                
+					                
+					                <div class="col-sm-6 mb-3 mb-sm-0">
+					                	<input type="text" class="form-control form-control-user" placeholder="WhatsApp" name="whatsapp" type="text">
+					                </div>
+					               
+					                
+				              	</div>		              	
 				              	
 				              	
 				              	
