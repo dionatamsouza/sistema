@@ -1,12 +1,7 @@
 <?php
-  if(isset($_GET['imoveis'])) {
-    $imoveis = $_GET['imoveis'];
-    if(!empty($imoveis)) {
-      echo "teste";
-    }
-    else {
-      header("Location: /");
-    }
+  $imoveis = $_GET['imoveis'];
+  if(isset($imoveis) AND !empty($imoveis)) {
+    echo "teste";
   }
   else {
     $omsselect = "SELECT * from imoveis WHERE tipo=$tipopage AND imobiliaria_creci=$lgnimobiliaria_creci";
