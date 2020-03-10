@@ -1,6 +1,6 @@
 <?php
-  if(isset($_GET['searchiddoimovel'])) {
-    $iddoimovel = $_GET['iddoimovel'];
+  if(isset($_GET['id'])) {
+    $iddoimovel = $_GET['id'];
     $omsselect = "SELECT * from files WHERE iddoimovel=$iddoimovel AND tipo='3' AND imobiliaria_creci=$lgnimobiliaria_creci";
     try {
       $omsresult = $bdd->prepare($omsselect);

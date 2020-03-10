@@ -12,7 +12,7 @@
           <div class="row mb-4">
             <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="GET">
               <div class="input-group">
-                <input type="text" class="form-control small" placeholder="ID do imóvel..." aria-label="Search" aria-describedby="basic-addon2" name="iddoimovel" autofocus>
+                <input type="text" class="form-control small" placeholder="ID do imóvel..." aria-label="Search" aria-describedby="basic-addon2" name="id" autofocus>
                 <div class="input-group-append">
                   <button class="btn btn-primary" type="submit">
                     <i class="fas fa-search fa-sm"></i>
