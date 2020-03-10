@@ -75,6 +75,21 @@
   <li class="nav-item">
     <a class="nav-link" href="/incluir-novo-contrato"><i class="fas fa-fw fa-file-signature"></i><span>Incluir novo contrato</span></a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/incluir-avaliacao-e-pericia"><i class="fas fa-fw fa-file-signature"></i><span>Incluir avaliação e perícia</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/incluir-auto-de-vistoria"><i class="fas fa-fw fa-file-signature"></i><span>Incluir auto de vistoria</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/incluir-copia-do-documento-do-imovel"><i class="fas fa-fw fa-file-signature"></i><span>Incluir copia do documento do imóvel</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/incluir-copia-do-documento-do-proprietario"><i class="fas fa-fw fa-file-signature"></i><span>Incluir copia do documento do proprietário</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/incluir-contrato-de-administracao"><i class="fas fa-fw fa-file-signature"></i><span>Incluir contrato de administração</span></a>
+  </li>
   <hr class="sidebar-divider">
   <div class="sidebar-heading">Contratos</div>
   <li class="nav-item">
