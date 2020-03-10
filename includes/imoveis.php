@@ -59,6 +59,8 @@
                   <h6 class="m-0 font-weight-bold text-primary">Informações Gerais</h6>
                 </div>
                 <div class="card-body">
+                  <p><i class="fas fa-comment-dollar"></i> <?php echo $omsvalor; ?></p>
+                  <p><i class="fas fa-map-marker-alt"></i> <?php echo $omsendereco; ?></p>
                 </div>
               </div>
             </div>
