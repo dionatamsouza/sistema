@@ -54,13 +54,6 @@
         <a class="collapse-item" href="/locacao">Locação</a>
         <a class="collapse-item" href="/venda">Venda</a>
         <a class="collapse-item" href="/rurais">Rurais</a>
-        <hr class="sidebar-divider">
-        <h6 class="collapse-header">Outros:</h6>
-        <a class="collapse-item" href="/avaliacao-e-pericia" >Avaliação e Perícia</a>
-        <a class="collapse-item" href="/auto-de-vistoria" >Auto de vistoria</a>
-        <a class="collapse-item" href="/copia-do-documento-do-imovel" >Cópia do documento do imóvel</a>
-        <a class="collapse-item" href="/copia-do-documento-do-proprietario" >Cópia do documento do proprietário</a>
-        <a class="collapse-item" href="/contrato-de-administracao" >Contrato de administração</a>
       </div>
     </div>
   </li>
