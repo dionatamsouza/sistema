@@ -66,7 +66,7 @@
 				                  	<input type="text" class="form-control form-control-user" placeholder="Endereço" name="endereco" required>
 				                </div>
 				                <div class="form-group">
-				                  	<input type="text" class="form-control form-control-user" placeholder="Valor" name="valor" required>
+				                  	<input id="valor" type="text" class="form-control form-control-user" placeholder="Valor" name="valor" data-thousands="." data-decimal="," data-prefix="R$ " required>
 				                </div>
 				                <div class="form-group">
 				                  	<input type="text" class="form-control form-control-user" placeholder="Título" name="titulo" required>
