@@ -70,7 +70,7 @@
     <a class="nav-link" href="/incluir-novo-funcionario"><i class="fas fa-fw fa-user"></i><span>Incluir novo funcionário</span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="<?php echo $gerenciador_site; ?>/apartments/backend/main/admin" target="_Blank"><i class="fas fa-fw fa-home"></i><span>Incluir novo imóvel</span></a>
+    <a class="nav-link" href="/incluir-novo-imovel"><i class="fas fa-fw fa-home"></i><span>Incluir novo imóvel</span></a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/incluir-novo-contrato"><i class="fas fa-fw fa-file-signature"></i><span>Incluir novo contrato</span></a>
@@ -104,6 +104,7 @@
   <li class="nav-item">
     <a class="nav-link" href="/contratos-arrendamento"><i class="fas fa-fw fa-file-signature"></i><span>Arrendamento</span></a>
   </li>
+  <hr class="sidebar-divider">
   <div class="sidebar-heading">Financeiro</div>
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
@@ -127,11 +128,8 @@
         <a class="collapse-item" href="aaa">Gerar boletos de alugueis</a>
         <a class="collapse-item" href="aaa">Gerar boleto avulso</a>
         <a class="collapse-item" href="aaa">Listar Boletos</a>
-        
         <a class="collapse-item" href="incluir-cliente">Incluir Cliente</a>
-        
-         <a class="collapse-item" href="listar-clientes">Listar Cientes</a>
-        
+        <a class="collapse-item" href="listar-clientes">Listar Cientes</a>
       </div>
     </div>
   </li>
@@ -160,40 +158,14 @@
       </div>
     </div>
   </li>
-  
-  
-  
-  
-   <li class="nav-item">
+  <li class="nav-item">
     <a class="nav-link" href="alugar-imovel"><i class="fas fa-fw fa-home"></i><span>Alugar Imóvel</span></a>
   </li>
-  
-  
-   <li class="nav-item">
+  <li class="nav-item">
     <a class="nav-link" href="desalugar-imovel" ><i class="fas fa-fw fa-home"></i><span>Desalugar Imóvel</span></a>
   </li>
-  
-  
-  
-  
   <hr class="sidebar-divider d-none d-md-block">
   <div class="text-center d-none d-md-inline">
     <button class="rounded-circle border-0" id="sidebarToggle"></button>
   </div>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
