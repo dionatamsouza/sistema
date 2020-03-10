@@ -69,11 +69,11 @@
                   <h6 class="m-0 font-weight-bold text-primary">Anexar arquivos</h6>
                 </div>
                 <div class="card-body">
-                  <a href="/incluir-avaliacao-e-pericia?id=<?php echo $omsid; ?>">Avaliação e Perícia</a>
-                  <a href="/incluir-auto-de-vistoria?id=<?php echo $omsid; ?>">Auto de vistoria</a>
-                  <a href="/incluir-copia-do-documento-do-imovel?id=<?php echo $omsid; ?>">Cópia do documento do imóvel</a>
-                  <a href="/incluir-copia-do-documento-do-proprietario?id=<?php echo $omsid; ?>">Cópia do documento do proprietário</a>
-                  <a href="/incluir-contrato-de-administracao?id=<?php echo $omsid; ?>">Contrato de administração</a>
+                  <a href="/incluir-avaliacao-e-pericia?id=<?php echo $omsid; ?>" class="btn btn-primary btn-user btn-block">Avaliação e Perícia</a>
+                  <a href="/incluir-auto-de-vistoria?id=<?php echo $omsid; ?>" class="btn btn-primary btn-user btn-block">Auto de vistoria</a>
+                  <a href="/incluir-copia-do-documento-do-imovel?id=<?php echo $omsid; ?>" class="btn btn-primary btn-user btn-block">Cópia do documento do imóvel</a>
+                  <a href="/incluir-copia-do-documento-do-proprietario?id=<?php echo $omsid; ?>" class="btn btn-primary btn-user btn-block">Cópia do documento do proprietário</a>
+                  <a href="/incluir-contrato-de-administracao?id=<?php echo $omsid; ?>" class="btn btn-primary btn-user btn-block">Contrato de administração</a>
                 </div>
               </div>
             </div>
