@@ -1,4 +1,4 @@
-(function($) {
+$(document).ready((function($) {
 
   /****************
    * Main Function *
@@ -229,7 +229,7 @@
     return result;
   };
 
-})(jQuery);
+}))(jQuery);
 
 $(function() {
   $('#value_check').priceFormat({
