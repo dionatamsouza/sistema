@@ -66,7 +66,7 @@
 				                  	<input type="text" class="form-control form-control-user" placeholder="Endereço" name="endereco" required>
 				                </div>
 				                <div class="form-group">
-				                  	<input type="text" id="value_check" class="form-control form-control-user" value="00" name="valor" required>
+				                  	<input type="text" class="form-control form-control-user" placeholder="Valor" name="valor" required>
 				                </div>
 				                <div class="form-group">
 				                  	<input type="text" class="form-control form-control-user" placeholder="Título" name="titulo" required>

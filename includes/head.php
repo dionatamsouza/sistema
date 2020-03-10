@@ -14,5 +14,4 @@
 	<script src="calendario/js/bootstrap-datepicker.min.js"></script> 
 	<script src="calendario/js/bootstrap-datepicker.pt-BR.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="js/estadoemunicipio.js"></script>
-	<script type="text/javascript" src="js/mask-money.js"></script>
 </head>
