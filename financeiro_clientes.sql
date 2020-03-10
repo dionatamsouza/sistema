@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 09-Mar-2020 às 22:34
+-- Tempo de geração: 10-Mar-2020 às 17:38
 -- Versão do servidor: 10.4.10-MariaDB
 -- versão do PHP: 7.3.12
 
@@ -41,6 +41,8 @@ CREATE TABLE IF NOT EXISTS `financeiro_clientes` (
   `telefone` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cep` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL,
   `codigo_ibge` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `whatsapp` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `imobiliaria_creci` int(15) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -49,8 +51,8 @@ CREATE TABLE IF NOT EXISTS `financeiro_clientes` (
 -- Extraindo dados da tabela `financeiro_clientes`
 --
 
-INSERT INTO `financeiro_clientes` (`id`, `nome`, `documento`, `data_nascimento`, `endereco_bairro`, `endereco_rua`, `endereco_numero`, `endereco_complemento`, `telefone`, `cep`, `codigo_ibge`, `imobiliaria_creci`) VALUES
-(1, 'Lauro Glassmann', '07235751932', '21/03/2019', 'Alvorada', 'Vitória', '660', 'Nada', '(45) 99933-5708', '85960-000', '4114609', 25469);
+INSERT INTO `financeiro_clientes` (`id`, `nome`, `documento`, `data_nascimento`, `endereco_bairro`, `endereco_rua`, `endereco_numero`, `endereco_complemento`, `telefone`, `cep`, `codigo_ibge`, `email`, `whatsapp`, `imobiliaria_creci`) VALUES
+(1, 'Lauro Glassmann', '07235751932', '21/03/2019', 'Alvorada', 'Vitória', '660', 'Nada', '(45) 99933-5708', '85960-000', '4114609', 'netsitesmcr@gmail.com', '(45)999335708', 25469);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
