@@ -66,7 +66,7 @@
 				                  	<input type="text" class="form-control form-control-user" placeholder="Endereço" name="endereco" required>
 				                </div>
 				                <div class="form-group">
-				                  	<input type="text" class="form-control form-control-user" placeholder="Valor" name="valor" required>
+				                  	<input type="text" id="value_check" class="form-control form-control-user" value="00" name="valor" required>
 				                </div>
 				                <div class="form-group">
 				                  	<input type="text" class="form-control form-control-user" placeholder="Título" name="titulo" required>
@@ -76,15 +76,13 @@
 				                </div>
 				                <div class="form-group row">
 				                  	<div class="col-sm-4 mb-3 mb-sm-0">
-				                    	<select class="form-control form-control-user select" name="numerodedormitorios" required>
-					                		<option value>Selecione o número de dormitórios</option>
-					                	</select>
+				                    	<input type="number" class="form-control form-control-user" placeholder="Número de dormitórios" name="numerodedormitorios" required>
 				                  	</div>
 				                  	<div class="col-sm-4 mb-3 mb-sm-0">
-					                	<input type="text" class="form-control form-control-user" placeholder="Área construída" name="areaconstruida" required>
+					                	<input type="number" class="form-control form-control-user" placeholder="Área construída" name="areaconstruida" required>
 				                  	</div>
 				                  	<div class="col-sm-4 mb-3 mb-sm-0">
-					                	<input type="text" class="form-control form-control-user" placeholder="Área terreno total" name="areaterrenototal" required>
+					                	<input type="number" class="form-control form-control-user" placeholder="Área terreno total" name="areaterrenototal" required>
 				                  	</div>
 				                 </div>
 				                 <div class="form-group">
