@@ -1,5 +1,11 @@
 <?php
-  if(!isset($_GET['imoveis'] AND empty($_GET['imoveis']))) {
+  if(isset($_GET['imoveis'])) {
+    $imoveis = $_GET['imoveis'];
+    if(!empty($imoveis)) {
+      echo "teste";
+    }
+  }
+  else {
     $omsselect = "SELECT * from imoveis WHERE tipo=$tipopage AND imobiliaria_creci=$lgnimobiliaria_creci";
     try {
       $omsresult = $bdd->prepare($omsselect);
