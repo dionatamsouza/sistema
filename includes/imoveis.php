@@ -2,7 +2,7 @@
   if(isset($_GET['imoveis'])) {
     $imoveis = $_GET['imoveis'];
     if(!empty($imoveis)) {
-      $omsselect = "SELECT * from imoveis WHERE tipo=$tipopage AND imobiliaria_creci=$lgnimobiliaria_creci";
+      $omsselect = "SELECT * from imoveis WHERE id=$imoveis AND imobiliaria_creci=$lgnimobiliaria_creci";
       try {
         $omsresult = $bdd->prepare($omsselect);
         $omsresult->execute();
@@ -12,7 +12,7 @@
             $omsid = $omsmost->id;
             $omstitulo = $omsmost->titulo;
             $omsdescricao = $omsmost->descricao;
-            $omstipo = $omsmost->tipo;
+            if($omsmost->tipo == '1') { $omstipo = 'Locação'; } elseif($omsmost->tipo == '2') { $omstipo = 'Venda'; } elseif($omsmost->tipo == '3') { $omstipo = 'Rural'; }
             $omstipodepropriedade = $omsmost->tipo_de_propriedade;
             $omsendereco = $omsmost->endereco;
             $omsvalor = $omsmost->valor;
@@ -59,11 +59,41 @@
                   <h6 class="m-0 font-weight-bold text-primary">Informações Gerais</h6>
                 </div>
                 <div class="card-body">
+                  <p><i class="fas fa-comment-dollar"></i> <?php echo $omsvalor; ?></p>
+                  <hr class="sidebar-divider">
+                  <p><i class="fas fa-map-marker-alt"></i> <?php echo $omsendereco; ?></p>
+                </div>
+              </div>
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Arquivos anexos</h6>
+                </div>
+                <div class="card-body">
+                  <a href="/avaliacao-e-pericia?id=<?php echo $omsid; ?>" class="btn btn-light btn-user btn-block border">Avaliação e Perícia</a>
+                  <a href="/auto-de-vistoria?id=<?php echo $omsid; ?>" class="btn btn-light btn-user btn-block border">Auto de vistoria</a>
+                  <a href="/copia-do-documento-do-imovel?id=<?php echo $omsid; ?>" class="btn btn-light btn-user btn-block border">Cópia do documento do imóvel</a>
+                  <a href="/copia-do-documento-do-proprietario?id=<?php echo $omsid; ?>" class="btn btn-light btn-user btn-block border">Cópia do documento do proprietário</a>
+                  <a href="/contrato-de-administracao?id=<?php echo $omsid; ?>" class="btn btn-light btn-user btn-block border">Contrato de administração</a>
+                </div>
+              </div>
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Anexar arquivos</h6>
+                </div>
+                <div class="card-body">
+                  <a href="/incluir-avaliacao-e-pericia?id=<?php echo $omsid; ?>" class="btn btn-light btn-user btn-block border">Avaliação e Perícia</a>
+                  <a href="/incluir-auto-de-vistoria?id=<?php echo $omsid; ?>" class="btn btn-light btn-user btn-block border">Auto de vistoria</a>
+                  <a href="/incluir-copia-do-documento-do-imovel?id=<?php echo $omsid; ?>" class="btn btn-light btn-user btn-block border">Cópia do documento do imóvel</a>
+                  <a href="/incluir-copia-do-documento-do-proprietario?id=<?php echo $omsid; ?>" class="btn btn-light btn-user btn-block border">Cópia do documento do proprietário</a>
+                  <a href="/incluir-contrato-de-administracao?id=<?php echo $omsid; ?>" class="btn btn-light btn-user btn-block border">Contrato de administração</a>
                 </div>
               </div>
             </div>
   <?php
           }
+        }
+        else {
+          header("Location: /");
         }
       }
       catch(PDOException $e) {
@@ -97,16 +127,19 @@
                 </div>
                 <div class="card-body">
                   <p><strong>Descrição:</strong> <?php echo $omsdescricao; ?></p>
-                  <div class="col-md-3 d-inline-flex">
+                  <div class="col-md-2 d-inline-flex text-center">
                     <p><i class="fas fa-bed"></i> 4</p>
                   </div>
-                  <div class="col-md-3 d-inline-flex">
+                  <div class="col-md-2 d-inline-flex text-center">
                     <p><i class="fas fa-bath"></i> 4</p>
                   </div>
-                  <div class="col-md-3 d-inline-flex">
+                  <div class="col-md-2 d-inline-flex text-center">
                     <p><i class="fas fa-swimming-pool"></i> 4</p>
                   </div>
-                  <div class="col-md-3 d-inline-flex">
+                  <div class="col-md-2 d-inline-flex text-center">
+                    <p><i class="fas fa-car"></i> 4</p>
+                  </div>
+                  <div class="col-md-2 d-inline-flex text-center">
                     <p><i class="fas fa-car"></i> 4</p>
                   </div>
                 </div>

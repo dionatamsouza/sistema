@@ -51,16 +51,9 @@
     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Imóveis:</h6>
-        <a class="collapse-item" href="<?php echo $gerenciador_site; ?>/search?country=0&region=0&city%5B%5D=0&apType=1&objType=0&do-term-search=0&sApId=" target="_Blank">Locação</a>
-        <a class="collapse-item" href="<?php echo $gerenciador_site; ?>/search?country=0&region=0&city%5B%5D=0&apType=2&objType=0&do-term-search=0&sApId=" target="_Blank">Venda</a>
-        <a class="collapse-item" href="<?php echo $gerenciador_site; ?>/search?country=0&region=0&city%5B%5D=0&apType=2&objType=31&do-term-search=0&sApId=" target="_Blank">Rurais</a>
-        <hr class="sidebar-divider">
-        <h6 class="collapse-header">Outros:</h6>
-        <a class="collapse-item" href="/avaliacao-e-pericia" >Avaliação e Perícia</a>
-        <a class="collapse-item" href="/auto-de-vistoria" >Auto de vistoria</a>
-        <a class="collapse-item" href="/copia-do-documento-do-imovel" >Cópia do documento do imóvel</a>
-        <a class="collapse-item" href="/copia-do-documento-do-proprietario" >Cópia do documento do proprietário</a>
-        <a class="collapse-item" href="/contrato-de-administracao" >Contrato de administração</a>
+        <a class="collapse-item" href="/locacao">Locação</a>
+        <a class="collapse-item" href="/venda">Venda</a>
+        <a class="collapse-item" href="/rurais">Rurais</a>
       </div>
     </div>
   </li>
@@ -74,21 +67,6 @@
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/incluir-novo-contrato"><i class="fas fa-fw fa-file-signature"></i><span>Incluir novo contrato</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/incluir-avaliacao-e-pericia"><i class="fas fa-fw fa-file-signature"></i><span>Incluir avaliação e perícia</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/incluir-auto-de-vistoria"><i class="fas fa-fw fa-file-signature"></i><span>Incluir auto de vistoria</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/incluir-copia-do-documento-do-imovel"><i class="fas fa-fw fa-file-signature"></i><span>Incluir copia do documento do imóvel</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/incluir-copia-do-documento-do-proprietario"><i class="fas fa-fw fa-file-signature"></i><span>Incluir copia do documento do proprietário</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/incluir-contrato-de-administracao"><i class="fas fa-fw fa-file-signature"></i><span>Incluir contrato de administração</span></a>
   </li>
   <hr class="sidebar-divider">
   <div class="sidebar-heading">Contratos</div>

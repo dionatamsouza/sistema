@@ -8,9 +8,11 @@
       <div id="content">
         <?php include_once("includes/topbar.php"); ?>
         <div class="container-fluid">
-          <h1 class="h3 mb-4 text-gray-800">Avaliação e Perícia</h1>
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <?php if(!isset($_GET['imoveis'])) { ?><h1 class="h3 mb-0 text-gray-800">Rurais</h1><?php } ?>
+          </div>
           <div class="row">
-            <?php include_once("includes/listar-avaliacaoepericia.php"); ?>
+            <?php $tipopage = '3'; include_once("includes/imoveis.php"); ?>
           </div>
         </div>
       </div>

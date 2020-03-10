@@ -1,6 +1,6 @@
 <?php
-  if(isset($_GET['searchiddoimovel'])) {
-    $iddoimovel = $_GET['iddoimovel'];
+  if(isset($_GET['id']) AND !empty($_GET['id'])) {
+    $iddoimovel = $_GET['id'];
     $omsselect = "SELECT * from files WHERE iddoimovel=$iddoimovel AND tipo='4' AND imobiliaria_creci=$lgnimobiliaria_creci";
     try {
       $omsresult = $bdd->prepare($omsselect);
@@ -48,6 +48,6 @@
     }
   }
   else {
-      echo '<div class="ml-md-3">Nada encontrado..</div>';
+      header("Location: /");
   }
 ?>

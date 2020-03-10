@@ -76,15 +76,13 @@
 				                </div>
 				                <div class="form-group row">
 				                  	<div class="col-sm-4 mb-3 mb-sm-0">
-				                    	<select class="form-control form-control-user select" name="numerodedormitorios" required>
-					                		<option value>Selecione o número de dormitórios</option>
-					                	</select>
+				                    	<input type="number" class="form-control form-control-user" placeholder="Número de dormitórios" name="numerodedormitorios" required>
 				                  	</div>
 				                  	<div class="col-sm-4 mb-3 mb-sm-0">
-					                	<input type="text" class="form-control form-control-user" placeholder="Área construída" name="areaconstruida" required>
+					                	<input type="number" class="form-control form-control-user" placeholder="Área construída" name="areaconstruida" required>
 				                  	</div>
 				                  	<div class="col-sm-4 mb-3 mb-sm-0">
-					                	<input type="text" class="form-control form-control-user" placeholder="Área terreno total" name="areaterrenototal" required>
+					                	<input type="number" class="form-control form-control-user" placeholder="Área terreno total" name="areaterrenototal" required>
 				                  	</div>
 				                 </div>
 				                 <div class="form-group">
