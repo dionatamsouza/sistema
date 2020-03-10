@@ -589,4 +589,3 @@
         }
     };
 })(window.jQuery || window.Zepto);
-$("#valor").maskMoney();
