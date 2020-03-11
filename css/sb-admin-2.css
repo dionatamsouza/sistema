@@ -4339,7 +4339,7 @@ input[type="button"].btn-block {
 }
 
 .scale:hover, .scale:focus {
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 .card.shadow.mb-4 a {
