@@ -321,7 +321,19 @@
     $id_imovel = uniqid();
 
 
-
+    $name=$_POST['user_name'];
+    $images=$_FILES['fotoimovel']['name'];
+    $tmp_dir=$_FILES['fotoimovel']['tmp_name'];
+    $imageSize=$_FILES['fotoimovel']['size'];
+    $upload_dir='uploads/';
+    $imgExt=strtolower(pathinfo($images,PATHINFO_EXTENSION));
+    $valid_extensions=array('jpeg', 'jpg', 'png', 'gif', 'pdf');
+    $picProfile=rand(1000, 1000000).".".$imgExt;
+    move_uploaded_file($tmp_dir, $upload_dir.$picProfile);
+    $stmt=$db_conn->prepare('INSERT INTO images(id_imovel, file) VALUES (:id_imovel, :file)');
+    $stmt->bindParam(':id_imovel', $id_imovel);
+    $stmt->bindParam(':file', $picProfile);
+    if($stmt->execute());
 
 
 
