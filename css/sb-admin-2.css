@@ -11032,6 +11032,7 @@ form.user .form-control.form-control-user.select {
     top: -3px;
     right: -3px;
     cursor: pointer;
+    z-index: 99999;
 }
 
 .btn-trash i {
