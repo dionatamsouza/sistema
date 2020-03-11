@@ -124,7 +124,7 @@
           $omsfotoimovel = $omsmost->foto_imovel;
 ?>
           <div class="col-lg-3">
-            <div class="card shadow mb-4">
+            <div class="card shadow mb-4 scale">
               <a class="btn-trash" href="aaaa"><i class="fas fa-times"></i></a>
               <a href="?imoveis=<?php echo $omsid; ?>">
                 <img src="<?php echo $omsfotoimovel; ?>" width="100%">
