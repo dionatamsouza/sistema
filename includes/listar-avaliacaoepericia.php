@@ -49,13 +49,6 @@
             </div>
           </div>
   <?php
-          if(isset($_POST['avaliacaoepericia'.$omsid])) {
-            unlink($omsfile);
-            $vercodeeas = $bdd->prepare('DELETE FROM files WHERE id=:id');
-            $vercodeeas->bindParam(':id', $omsid);
-            $vercodeeas->execute();
-            header("Refresh: 0");
-          }
         }
       }
       else {

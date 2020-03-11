@@ -29,13 +29,6 @@
           </div>
         </div>
 <?php
-        if(isset($_POST['dltcontratos'.$omsid])) {
-          unlink($omsfile);
-          $vercodeeas = $bdd->prepare('DELETE FROM modelos_contratos WHERE id=:id');
-          $vercodeeas->bindParam(':id', $omsid);
-          $vercodeeas->execute();
-          header("Refresh: 0");
-        }
       }
     }
     else {

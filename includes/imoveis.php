@@ -24,7 +24,13 @@
             <div class="col-lg-9">
               <div class="card shadow mb-4">
                 <a class="btn-trash" href="aaaa"><i class="fas fa-times"></i></a>
-                <img src="<?php echo $omsfotoimovel; ?>" width="100%">
+                <div class="rslides_container">
+                  <ul class="rslides" id="slider1">
+                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+                  </ul>
+                </div>
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary"><?php echo $omstitulo; ?></h6>
                 </div>
