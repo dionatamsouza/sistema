@@ -316,19 +316,27 @@
   }
   //-----------------------------------------------------------------------------------
 
-  //cadastrar funcionário
+  //cadastrar imóvel
   if(isset($_POST['cadastrar-imovel'])) {
-    $arquivo = $_FILES['fotoimovel'];
-    $nome = $arquivo['name'];
-    $tmp = $arquivo['tmp_name'];
-    $extensao = explode('.', $nome);
-    $ext = end($extensao);
-    $novonome = md5($nome).'.'.$ext;
-    if(empty($arquivo)) {
+    $id_imovel = uniqid();
+    $countfiles = count($_FILES['fotoimovel']['name']);
+    $query = "INSERT INTO images (id_imovel,file) VALUES(?,?)";
+    $statement = $conn->prepare($query);
+    for($i=0;$i<$countfiles;$i++) {
+      $filename = $_FILES['fotoimovel']['name'][$i];
+      $ext = end((explode(".", $filename)));
+      $valid_ext = array("png","jpeg","jpg");
+      if(in_array($ext, $valid_ext)) {
+        if(move_uploaded_file($_FILES['fotoimovel']['tmp_name'][$i],'imgs/imoveis/'.$filename)) {
+          $statement->execute(array($id_imovel,'imgs/imoveis/'.$filename));
+        }
+      }
     }
-    elseif(move_uploaded_file($tmp, 'imgs/imoveis/'.$novonome)) {
-    }
-    $dstimg = '/imgs/imoveis/'.$novonome;
+
+
+
+
+
     $cadinsert = "INSERT into imoveis (tipo, tipo_de_propriedade, pais, estado, municipio, endereco, valor, titulo, descricao, numero_de_dormitorios, area_construida, area_terreno_total, foto_imovel, imobiliaria_creci) VALUES (:tipo, :tipo_de_propriedade, :pais, :estado, :municipio, :endereco, :valor, :titulo, :descricao, :numero_de_dormitorios, :area_construida, :area_terreno_total, :foto_imovel, :imobiliaria_creci)";
     try {
       $cadresult = $bdd->prepare($cadinsert);
@@ -344,7 +352,7 @@
       $cadresult->bindParam(':numero_de_dormitorios' , $_POST['numerodedormitorios'], PDO::PARAM_STR);
       $cadresult->bindParam(':area_construida' , $_POST['areaconstruida'], PDO::PARAM_STR);
       $cadresult->bindParam(':area_terreno_total' , $_POST['areaterrenototal'], PDO::PARAM_STR);
-      $cadresult->bindParam(':foto_imovel' , $dstimg, PDO::PARAM_STR);
+      $cadresult->bindParam(':id_imovel' , $id_imovel, PDO::PARAM_STR);
       $cadresult->bindParam(':imobiliaria_creci' , $lgnimobiliaria_creci, PDO::PARAM_STR);
       $cadresult->execute();
       $cadcontar = $cadresult->rowCount();
