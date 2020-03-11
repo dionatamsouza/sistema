@@ -10,7 +10,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   	<link href="css/sb-admin-2.css" rel="stylesheet">
 	<link href="calendario/css/bootstrap-datepicker.css" rel="stylesheet"/>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="calendario/js/bootstrap-datepicker.min.js"></script> 
 	<script src="calendario/js/bootstrap-datepicker.pt-BR.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="js/estadoemunicipio.js"></script>
