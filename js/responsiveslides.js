@@ -1,4 +1,4 @@
-$(function () {
+jQuery(function ($) {
   $("#slider1").responsiveSlides({
     auto: false,
     pager: false,
