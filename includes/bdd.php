@@ -321,7 +321,7 @@
     $id_imovel = uniqid();
 
 
-     foreach foreach ($_FILES['foto_imagens']['tmp_name'] as $chave=>$valor){ echo $valor; 
+      foreach ($_FILES['foto_imagens']['tmp_name'] as $chave=>$valor){ echo $valor; 
      	// aqui dai vc monta o código pra inserir no bd, dar nomes etc
      	
      	
