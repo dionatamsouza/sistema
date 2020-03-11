@@ -319,19 +319,7 @@
   //cadastrar imóvel
   if(isset($_POST['cadastrar-imovel'])) {
     $id_imovel = uniqid();
-    $countfiles = count($_FILES['fotoimovel']['name']);
-    $query = "INSERT INTO images (id_imovel,file) VALUES(?,?)";
-    $statement = $conn->prepare($query);
-    for($i=0;$i<$countfiles;$i++) {
-      $filename = $_FILES['fotoimovel']['name'][$i];
-      $ext = end((explode(".", $filename)));
-      $valid_ext = array("png","jpeg","jpg");
-      if(in_array($ext, $valid_ext)) {
-        if(move_uploaded_file($_FILES['fotoimovel']['tmp_name'][$i],'imgs/imoveis/'.$filename)) {
-          $statement->execute(array($id_imovel,'imgs/imoveis/'.$filename));
-        }
-      }
-    }
+
 
 
 
