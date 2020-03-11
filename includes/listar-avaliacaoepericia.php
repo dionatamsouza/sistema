@@ -13,7 +13,7 @@
           $omspericia = $omsmost->file2;
   ?>
           <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
+            <div class="card border-left-info shadow h-100 py-2 scale">
               <form method="POST"><label class="btn-trash" for="avaliacaoepericia"><i class="fas fa-times"></i></label><input type="submit" id="avaliacaoepericia" name="avaliacaoepericia<?php echo $omsid; ?>" hidden></form>
               <a href="<?php echo $omsavaliacao; ?>" target="_Blank">
                 <div class="card-body">
@@ -49,13 +49,6 @@
             </div>
           </div>
   <?php
-          if(isset($_POST['avaliacaoepericia'.$omsid])) {
-            unlink($omsfile);
-            $vercodeeas = $bdd->prepare('DELETE FROM files WHERE id=:id');
-            $vercodeeas->bindParam(':id', $omsid);
-            $vercodeeas->execute();
-            header("Refresh: 0");
-          }
         }
       }
       else {

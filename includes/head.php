@@ -14,4 +14,8 @@
 	<script src="calendario/js/bootstrap-datepicker.min.js"></script> 
 	<script src="calendario/js/bootstrap-datepicker.pt-BR.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="js/estadoemunicipio.js"></script>
+	<link rel="stylesheet" href="css/themes.css">
+	<link rel="stylesheet" href="css/responsiveslides.css">
+	<script src="js/responsiveslides.min.js"></script>
+  	<script src="js/responsiveslides.js"></script>
 </head>

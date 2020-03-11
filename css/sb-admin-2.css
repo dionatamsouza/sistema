@@ -4338,6 +4338,10 @@ input[type="button"].btn-block {
   border-radius: 0.35rem;
 }
 
+.scale:hover, .scale:focus {
+  transform: scale(1.02);
+}
+
 .card.shadow.mb-4 a {
     color: inherit;
 }
@@ -11028,6 +11032,7 @@ form.user .form-control.form-control-user.select {
     top: -3px;
     right: -3px;
     cursor: pointer;
+    z-index: 99999;
 }
 
 .btn-trash i {

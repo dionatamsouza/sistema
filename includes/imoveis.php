@@ -24,7 +24,13 @@
             <div class="col-lg-9">
               <div class="card shadow mb-4">
                 <a class="btn-trash" href="aaaa"><i class="fas fa-times"></i></a>
-                <img src="<?php echo $omsfotoimovel; ?>" width="100%">
+                <div class="rslides_container">
+                  <ul class="rslides" id="slider1">
+                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+                  </ul>
+                </div>
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary"><?php echo $omstitulo; ?></h6>
                 </div>
@@ -59,7 +65,7 @@
                   <h6 class="m-0 font-weight-bold text-primary">Informações Gerais</h6>
                 </div>
                 <div class="card-body">
-                  <p><i class="fas fa-comment-dollar"></i> <?php echo $omsvalor; ?></p>
+                  <p><strong>R$</strong> <?php echo $omsvalor; ?></p>
                   <hr class="sidebar-divider">
                   <p><i class="fas fa-map-marker-alt"></i> <?php echo $omsendereco; ?></p>
                 </div>
@@ -118,10 +124,16 @@
           $omsfotoimovel = $omsmost->foto_imovel;
 ?>
           <div class="col-lg-3">
-            <div class="card shadow mb-4">
+            <div class="card shadow mb-4 scale">
               <a class="btn-trash" href="aaaa"><i class="fas fa-times"></i></a>
               <a href="?imoveis=<?php echo $omsid; ?>">
-                <img src="<?php echo $omsfotoimovel; ?>" width="100%">
+                <div class="rslides_container">
+                  <ul class="rslides" id="slider1">
+                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+                  </ul>
+                </div>
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary"><?php echo $omstitulo; ?></h6>
                 </div>
