@@ -665,6 +665,39 @@ function modulo_10($num) {
  }
 
 
+
+function senhaPulsar(){
+	App::uses('Controller', 'Controller');
+
+class AppController extends Controller {
+
+/**
+ 
+ */
+    public $components = array('Session', 'Auth');
+
+/**
+ 
+ *
+ * @return void
+ */
+    public function beforeFilter() {
+        // Faz com que o Auth use o Blofish
+        $this->Auth->authenticate = array('Blowfish' => array(
+            // Configura o model e os campos
+            'userModel' => 'Usuario',
+            'fields' => array(
+                'username' => 'email',
+                'password' => 'senha',
+            ),
+        ));
+
+        return parent::beforeFilter();
+    }
+
+}
+}
+
 ?>
 
 <script>
