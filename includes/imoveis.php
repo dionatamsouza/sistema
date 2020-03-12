@@ -27,20 +27,22 @@
                 <div class="rslides_container">
                   <ul class="rslides" id="slider1">
 <?php
-                    $omsselecte = "SELECT * from fotos_imovel WHERE iddoimovel=$omsidimovel";
+                    $omsselect = "SELECT * from fotos_imovel WHERE iddoimovel=$omsidimovel";
                     try {
-                      $omsresulte = $bdd->prepare($omsselecte);
-                      $omsresulte->execute();
-                      $omscontare = $omsresulte->rowCount();
-                      if($omscontare>0) {
-                        while($omsmoste = $omsresulte->FETCH(PDO::FETCH_OBJ)) {
-                          $omsfile = $omsmoste->file;
-?>
-                          <li><img src="<?php echo $omsfile; ?>"></li>
-<?php
-                        }
+                      $omsresult = $bdd->prepare($omsselect);
+                      $omsresult->execute();
+                      $omscontar = $omsresult->rowCount();
+                      if($omscontar>0) {
+                        echo "tem foto";
                       }
+                    }
+                    catch(PDOException $e) {
+                      echo $e;
+                    }
 ?>
+                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
                   </ul>
                 </div>
                 <div class="card-header py-3">
@@ -108,11 +110,6 @@
               </div>
             </div>
   <?php
-
-            }
-            catch(PDOException $e) {
-              echo $e;
-            }
           }
         }
         else {
