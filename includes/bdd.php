@@ -321,8 +321,8 @@
     $id_imovel = uniqid();
 
 
-    foreach ($_FILES['fotoimovel']['tmp_name'] as $chave=>$valor) {
-      $arquivo = $valor;
+
+      $arquivo = $_FILES['fotoimovel'];
       $nome = $arquivo['name'];
       $tmp = $arquivo['tmp_name'];
       $extensao = explode('.', $nome);
@@ -335,7 +335,8 @@
         echo "Enviado!";
       }
       echo $dstimg = '/imgs/imoveis/'.$novonome;
-   	}
+
+
 
 
     /*
