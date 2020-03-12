@@ -319,30 +319,24 @@
   //cadastrar imóvel
   if(isset($_POST['cadastrar-imovel'])) {
     $id_imovel = uniqid();
-
-
     $diretorio = "imgs/imoveis/";   
     $arquivo = isset($_FILES['fotoimovel']) ? $_FILES['fotoimovel'] : FALSE;
-
-
-  
-
-
-    for ($controle = 0; $controle < count($arquivo['name']); $controle++) {
-
-      echo $arquivo['name'].'<br>';
-
-
+    for($controle = 0; $controle < count($arquivo['name']); $controle++) {
       $destino = $diretorio.$arquivo['name'][$controle];
       if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)) {
-        echo "Upload realizado com sucesso<br>";
-      }
-      else {
-        echo "Erro ao realizar upload";
+        $cadinsert = "INSERT into fotos_imovel (iddoimovel, file) VALUES (:iddoimovel, :file)";
+        try {
+          $cadresult = $bdd->prepare($cadinsert);
+          $cadresult->bindParam(':iddoimovel' , $id_imovel, PDO::PARAM_STR);
+          $cadresult->bindParam(':file' , $destino, PDO::PARAM_STR);
+          $cadresult->execute();
+          $cadcontar = $cadresult->rowCount();
+        }
+        catch(PDOException $e) {
+          echo $e;
+        }
       }
     }
-
-
     /*
     $cadinsert = "INSERT into imoveis (tipo, tipo_de_propriedade, pais, estado, municipio, endereco, valor, titulo, descricao, numero_de_dormitorios, area_construida, area_terreno_total, id_imovel, imobiliaria_creci) VALUES (:tipo, :tipo_de_propriedade, :pais, :estado, :municipio, :endereco, :valor, :titulo, :descricao, :numero_de_dormitorios, :area_construida, :area_terreno_total, :id_imovel, :imobiliaria_creci)";
     try {
