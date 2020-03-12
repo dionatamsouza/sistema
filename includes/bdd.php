@@ -329,7 +329,7 @@
     $extensao = explode('.', $nome);
     $ext = end($extensao);
     $novonome = md5($nome).'.'.$ext;
-    $arquivo['name'] = $novonome;
+    $arquivo['name'] == $novonome;
 
 
     for ($controle = 0; $controle < count($arquivo['name']); $controle++) {
