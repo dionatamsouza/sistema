@@ -328,9 +328,9 @@
     $extensao = explode('.', $nome);
     $ext = end($extensao);
     $novonome = md5($nome).'.'.$ext;
-    
+
     for ($controle = 0; $controle < count($novonome); $controle++) {
-      $destino = $diretorio.$novonome[$controle];
+      $destino = $diretorio.$novonome.[$controle];
       if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)) {
         echo "Upload realizado com sucesso<br>";
       }
