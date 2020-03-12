@@ -319,7 +319,7 @@
   //cadastrar imóvel
   if(isset($_POST['cadastrar-imovel'])) {
     $id_imovel = uniqid();
-    $diretorio = "/imgs/imoveis/";   
+    $diretorio = "imgs/imoveis/";   
     $arquivo = isset($_FILES['fotoimovel']) ? $_FILES['fotoimovel'] : FALSE;
     for($controle = 0; $controle < count($arquivo['name']); $controle++) {
       $destino = $diretorio.md5($arquivo['name'])[$controle];
