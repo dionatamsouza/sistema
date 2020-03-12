@@ -26,6 +26,7 @@
               		<div class="card shadow mb-4">
                 		<div class="card-body">
                 			<form class="user" method="POST" enctype="multipart/form-data">
+                				<!--
                 				<div class="form-group row">
 				                  	<div class="col-sm-6 mb-3 mb-sm-0">
 				                    	<select class="form-control form-control-user select" name="tipo" required>
@@ -85,6 +86,7 @@
 					                	<input type="number" class="form-control form-control-user" placeholder="Área terreno total" name="areaterrenototal" required>
 				                  	</div>
 				                 </div>
+				             	-->
 				                 <div class="form-group">
 				                  	<input type="file" class="form-control form-control-user select" name="fotoimovel[]" multiple required>
 				                </div>
