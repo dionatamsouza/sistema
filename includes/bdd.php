@@ -319,16 +319,18 @@
   //cadastrar imóvel
   if(isset($_POST['cadastrar-imovel'])) {
     $id_imovel = uniqid();
-    $diretorio = "/imgs/imoveis/";   
+    $diretoriobdd = "/imgs/imoveis/";   
+    $diretorio = "imgs/imoveis/";   
     $arquivo = isset($_FILES['fotoimovel']) ? $_FILES['fotoimovel'] : FALSE;
     for($controle = 0; $controle < count($arquivo['name']); $controle++) {
-      $destino = $diretorio.$arquivo['name'][$controle];
+      $destinobdd = $diretorio.$arquivo['name'][$controle];
+      $destino = $diretoriobdd.$arquivo['name'][$controle];
       if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)) {
         $cadinsert = "INSERT into fotos_imovel (iddoimovel, file) VALUES (:iddoimovel, :file)";
         try {
           $cadresult = $bdd->prepare($cadinsert);
           $cadresult->bindParam(':iddoimovel' , $id_imovel, PDO::PARAM_STR);
-          $cadresult->bindParam(':file' , $destino, PDO::PARAM_STR);
+          $cadresult->bindParam(':file' , $destinobdd, PDO::PARAM_STR);
           $cadresult->execute();
           $cadcontar = $cadresult->rowCount();
         }
