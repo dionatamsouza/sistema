@@ -26,23 +26,7 @@
                 <a class="btn-trash" href="aaaa"><i class="fas fa-times"></i></a>
                 <div class="rslides_container">
                   <ul class="rslides" id="slider1">
-<?php
-                    $omsselecte = "SELECT * from fotos_imovel WHERE iddoimovel=$omsidimovel";
-                    try {
-                      $omsresulte = $bdd->prepare($omsselecte);
-                      $omsresulte->execute();
-                      $omscontare = $omsresulte->rowCount();
-                      if($omscontare>0) {
-                        echo "tem foto";
-                      }
-                    }
-                    catch(PDOException $e) {
-                      echo $e;
-                    }
-?>
-                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
-                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
-                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+                    <li><img src="<?php echo $omsidimovel; ?>"></li>
                   </ul>
                 </div>
                 <div class="card-header py-3">
