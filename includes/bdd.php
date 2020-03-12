@@ -339,7 +339,6 @@
         }
       }
     }
-    /*
     $cadinsert = "INSERT into imoveis (tipo, tipo_de_propriedade, pais, estado, municipio, endereco, valor, titulo, descricao, numero_de_dormitorios, area_construida, area_terreno_total, id_imovel, imobiliaria_creci) VALUES (:tipo, :tipo_de_propriedade, :pais, :estado, :municipio, :endereco, :valor, :titulo, :descricao, :numero_de_dormitorios, :area_construida, :area_terreno_total, :id_imovel, :imobiliaria_creci)";
     try {
       $cadresult = $bdd->prepare($cadinsert);
@@ -366,7 +365,6 @@
     catch(PDOException $e) {
       echo $e;
     }
-    */
   }
   //-----------------------------------------------------------------------------------
 ?>
