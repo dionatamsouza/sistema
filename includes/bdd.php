@@ -322,7 +322,19 @@
 
 
     foreach ($_FILES['fotoimovel']['tmp_name'] as $chave=>$valor) {
-      echo $valor;
+      $arquivo = $_FILES['fotoimovel'];
+      $nome = $arquivo['name'];
+      $tmp = $arquivo['tmp_name'];
+      $extensao = explode('.', $nome);
+      $ext = end($extensao);
+      $novonome = md5($nome).'.'.$ext;
+      if(empty($arquivo)) {
+        echo "Selecione um arquivo!";
+      }
+      elseif(move_uploaded_file($tmp, 'imgs/imoveis/'.$novonome)) {
+        echo "Enviado!";
+      }
+      echo $dstimg = '/imgs/imoveis/'.$novonome;
    	}
 
 
