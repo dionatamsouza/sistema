@@ -19,16 +19,32 @@
             $omsnumerodedormitorios = $omsmost->numero_de_dormitorios;
             $omsareaconstruida = $omsmost->area_construida;
             $omsareaterrenototal = $omsmost->area_terreno_total;
-            $omsfotoimovel = $omsmost->foto_imovel;
+            $omsidimovel = $omsmost->id_imovel;
   ?>
             <div class="col-lg-9">
               <div class="card shadow mb-4">
                 <a class="btn-trash" href="aaaa"><i class="fas fa-times"></i></a>
                 <div class="rslides_container">
                   <ul class="rslides" id="slider1">
-                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
-                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
-                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+<?php
+                    $omsselect = "SELECT * from fotos_imovel WHERE iddoimovel=$omsidimovel";
+                    try {
+                      $omsresult = $bdd->prepare($omsselect);
+                      $omsresult->execute();
+                      $omscontar = $omsresult->rowCount();
+                      if($omscontar>0) {
+                        while($omsmost = $omsresult->FETCH(PDO::FETCH_OBJ)) {
+                          $omsfile = $omsmost->file;
+?>
+                          <li><img src="<?php echo $omsfile; ?>"></li>
+<?php
+                        }
+                      }
+                    }
+                    catch(PDOException $e) {
+                      echo $e;
+                    }
+?>
                   </ul>
                 </div>
                 <div class="card-header py-3">
