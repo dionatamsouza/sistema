@@ -322,7 +322,7 @@
 
 
     foreach ($_FILES['fotoimovel']['tmp_name'] as $chave=>$valor) {
-      $arquivo = $_FILES['fotoimovel'];
+      $arquivo = $valor;
       $nome = $arquivo['name'];
       $tmp = $arquivo['tmp_name'];
       $extensao = explode('.', $nome);
