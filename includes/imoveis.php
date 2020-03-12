@@ -27,14 +27,14 @@
                 <div class="rslides_container">
                   <ul class="rslides" id="slider1">
 <?php
-                    $omsselect = "SELECT * from fotos_imovel WHERE iddoimovel=$omsidimovel";
+                    $omsselecte = "SELECT * from fotos_imovel WHERE iddoimovel=$omsidimovel";
                     try {
-                      $omsresult = $bdd->prepare($omsselect);
-                      $omsresult->execute();
-                      $omscontar = $omsresult->rowCount();
-                      if($omscontar>0) {
-                        while($omsmost = $omsresult->FETCH(PDO::FETCH_OBJ)) {
-                          $omsfile = $omsmost->file;
+                      $omsresulte = $bdd->prepare($omsselecte);
+                      $omsresulte->execute();
+                      $omscontare = $omsresulte->rowCount();
+                      if($omscontare>0) {
+                        while($omsmoste = $omsresulte->FETCH(PDO::FETCH_OBJ)) {
+                          $omsfile = $omsmoste->file;
 ?>
                           <li><img src="<?php echo $omsfile; ?>"></li>
 <?php
