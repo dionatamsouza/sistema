@@ -323,8 +323,8 @@
     $diretorio = "imgs/imoveis/";   
     $arquivo = isset($_FILES['fotoimovel']) ? $_FILES['fotoimovel'] : FALSE;
     for($controle = 0; $controle < count($arquivo['name']); $controle++) {
-      $destinobdd = $diretorio.$arquivo['name'][$controle];
-      $destino = $diretoriobdd.$arquivo['name'][$controle];
+      $destinobdd = $diretoriobdd.$arquivo['name'][$controle];
+      $destino = $diretorio.$arquivo['name'][$controle];
       if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)) {
         $cadinsert = "INSERT into fotos_imovel (iddoimovel, file) VALUES (:iddoimovel, :file)";
         try {
