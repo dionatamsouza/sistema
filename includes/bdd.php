@@ -325,7 +325,7 @@
     $arquivo = isset($_FILES['fotoimovel']) ? $_FILES['fotoimovel'] : FALSE;
 
 
-    echo $arquivo['name'].'<br>';
+  
 
 
     for ($controle = 0; $controle < count($arquivo['name']); $controle++) {
