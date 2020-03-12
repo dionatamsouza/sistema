@@ -325,14 +325,13 @@
     $arquivo = isset($_FILES['fotoimovel']) ? $_FILES['fotoimovel'] : FALSE;
 
 
-    
-
-
-    for ($controle = 0; $controle < count($arquivo['name']); $controle++) {
-      $nome = $arquivo['name'];
+    $nome = $arquivo['name'];
     $extensao = explode('.', $nome);
     $ext = end($extensao);
     echo $novonome = md5($nome).'.'.$ext;
+
+
+    for ($controle = 0; $controle < count($arquivo['name']); $controle++) {
       /*
       $destino = $diretorio.$arquivo['name'][$controle];
       if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)) {
