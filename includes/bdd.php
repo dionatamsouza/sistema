@@ -327,7 +327,7 @@
     foreach ($fotos as $chave=>$valor) {
       $hash=md5(uniqid(rand(), true));
       $nome = "$hash";
-      copy($valor,"uploadteste/$nome.jpg");
+      copy($valor,"imgs/imoveis/$nome.jpg");
       echo $valor;
     }
 
