@@ -26,7 +26,24 @@
                 <a class="btn-trash" href="aaaa"><i class="fas fa-times"></i></a>
                 <div class="rslides_container">
                   <ul class="rslides" id="slider1">
-                    <li><img src="<?php echo $omsidimovel; ?>"></li>
+<?php
+                    $omsselecte = "SELECT * from fotos_imovel WHERE id_imovel='$omsidimovel'";
+                    try {
+                      $omsresulte = $bdd->prepare($omsselecte);
+                      $omsresulte->execute();
+                      $omscontare = $omsresulte->rowCount();
+                      if($omscontare>0) {
+                        while($omsmoste = $omsresulte->FETCH(PDO::FETCH_OBJ)) {
+?>
+                          <li><img src="<?php echo $omsmoste->file; ?>"></li>
+<?php
+                        }
+                      }
+                    }
+                    catch(PDOException $e) {
+                      echo $e;
+                    }
+?>
                   </ul>
                 </div>
                 <div class="card-header py-3">
