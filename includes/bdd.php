@@ -326,10 +326,10 @@
       $destinobdd = $diretoriobdd.$arquivo['name'][$controle];
       $destino = $diretorio.$arquivo['name'][$controle];
       if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)) {
-        $cadinsert = "INSERT into fotos_imovel (iddoimovel, file) VALUES (:iddoimovel, :file)";
+        $cadinsert = "INSERT into fotos_imovel (id_imovel, file) VALUES (:id_imovel, :file)";
         try {
           $cadresult = $bdd->prepare($cadinsert);
-          $cadresult->bindParam(':iddoimovel' , $id_imovel, PDO::PARAM_STR);
+          $cadresult->bindParam(':id_imovel' , $id_imovel, PDO::PARAM_STR);
           $cadresult->bindParam(':file' , $destinobdd, PDO::PARAM_STR);
           $cadresult->execute();
           $cadcontar = $cadresult->rowCount();
