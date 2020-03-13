@@ -136,7 +136,7 @@
           $omsid = $omsmost->id;
           $omstitulo = $omsmost->titulo;
           $omsdescricao = $omsmost->descricao;
-          $omsfotoimovel = $omsmost->foto_imovel;
+          $omsidimovel = $omsmost->id_imovel;
 ?>
           <div class="col-lg-3">
             <div class="card shadow mb-4 scale">
@@ -144,9 +144,24 @@
               <a href="?imoveis=<?php echo $omsid; ?>">
                 <div class="rslides_container">
                   <ul class="rslides" id="slider1">
-                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
-                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
-                    <li><img src="<?php echo $omsfotoimovel; ?>"></li>
+<?php
+                    $omsselecte = "SELECT * from fotos_imovel WHERE id_imovel='$omsidimovel'";
+                    try {
+                      $omsresulte = $bdd->prepare($omsselecte);
+                      $omsresulte->execute();
+                      $omscontare = $omsresulte->rowCount();
+                      if($omscontare>0) {
+                        while($omsmoste = $omsresulte->FETCH(PDO::FETCH_OBJ)) {
+?>
+                          <li><img src="<?php echo $omsmoste->file; ?>"></li>
+<?php
+                        }
+                      }
+                    }
+                    catch(PDOException $e) {
+                      echo $e;
+                    }
+?>
                   </ul>
                 </div>
                 <div class="card-header py-3">
