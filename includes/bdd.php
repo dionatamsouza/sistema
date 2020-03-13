@@ -139,9 +139,9 @@
   }
   //-----------------------------------------------------------------------------------
 
-  //Cadastro de avaliação e perícia
+  //Cadastro de avaliacao e perícia
   if(isset($_POST['cadastrar-avaliacao-e-pericia'])) {
-    $arquivo = $_FILES['avaliacao'];
+    $arquivo = $_FILES['file'];
     $nome = $arquivo['name'];
     $tmp = $arquivo['tmp_name'];
     $extensao = explode('.', $nome);
@@ -151,26 +151,14 @@
     }
     elseif(move_uploaded_file($tmp, 'files/'.$novonome)) {
     }
-    $avaliacao = '/files/'.$novonome;
-    $arquivo2 = $_FILES['pericia'];
-    $nome2 = $arquivo2['name'];
-    $tmp2 = $arquivo2['tmp_name'];
-    $extensao2 = explode('.', $nome2);
-    $ext2 = end($extensao2);
-    $novonome2 = md5($nome2).'.'.$ext2;
-    if(empty($arquivo2)) {
-    }
-    elseif(move_uploaded_file($tmp2, 'files/'.$novonome2)) {
-    }
-    $pericia = '/files/'.$novonome2;
+    $dstimg = '/files/'.$novonome;
     $tipo = '1';
-    $cadinsert = "INSERT into files (iddoimovel, tipo, file, file2, imobiliaria_creci) VALUES (:iddoimovel, :tipo, :file, :file2, :imobiliaria_creci)";
+    $cadinsert = "INSERT into files (iddoimovel, tipo, file, imobiliaria_creci) VALUES (:iddoimovel, :tipo, :file, :imobiliaria_creci)";
     try {
       $cadresult = $bdd->prepare($cadinsert);
       $cadresult->bindParam(':iddoimovel' , $_POST['iddoimovel'], PDO::PARAM_STR);
       $cadresult->bindParam(':tipo' , $tipo, PDO::PARAM_STR);
-      $cadresult->bindParam(':file' , $avaliacao, PDO::PARAM_STR);
-      $cadresult->bindParam(':file2' , $pericia, PDO::PARAM_STR);
+      $cadresult->bindParam(':file' , $dstimg, PDO::PARAM_STR);
       $cadresult->bindParam(':imobiliaria_creci' , $lgnimobiliaria_creci, PDO::PARAM_STR);
       $cadresult->execute();
       $cadcontar = $cadresult->rowCount();
