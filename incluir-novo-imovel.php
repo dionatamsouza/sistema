@@ -29,7 +29,7 @@
                 				<div class="form-group row">
 				                  	<div class="col-sm-6 mb-3 mb-sm-0">
 				                    	<select class="form-control form-control-user select" name="tipo" required>
-					                		<option value>Selecione o tipo</option>
+					                		<option value disabled>Selecione o tipo</option>
 					                		<option value="1">Locação</option>
 											<option value="2">Venda</option>
 											<option value="3">Rurais</option>
@@ -37,10 +37,33 @@
 				                  	</div>
 				                  	<div class="col-sm-6">
 				                    	<select class="form-control form-control-user select" name="tipodepropriedade" required>
-					                		<option value>Selecione o tipo de propriedade</option>
-					                		<option value="1">Terreno</option>
-											<option value="2">Sala</option>
-											<option value="3">Prédio</option>
+					                		<option value disabled>Selecione o tipo de propriedade</option>
+					                		<option value="1">Comercial - Área Comercial</option>
+											<option value="2">Comercial - Barracão</option>
+											<option value="3">Comercial - Empresa</option>
+											<option value="4">Comercial - Prédio</option>
+											<option value="5">Comercial - Sala</option>
+											<option value="6">Comercial - Terreno</option>
+											<option value="7">Industrial - Área Industrial</option>
+											<option value="8">Industrial - Barracão</option>
+											<option value="9">Industrial - Prédio</option>
+											<option value="10">Industrial - Terreno</option>
+											<option value="11">Residencial - Apartamento</option>
+											<option value="12">Residencial - Apartamento Duplex</option>
+											<option value="13">Residencial - Área Residencial</option>
+											<option value="14">Residencial - Casa</option>
+											<option value="15">Residencial - Prédio</option>
+											<option value="16">Residencial - Quitinete</option>
+											<option value="17">Residencial - Sobrado</option>
+											<option value="18">Residencial - Terreno</option>
+											<option value="19">Fazendas</option>
+											<option value="20">Rural - Área Preservação Permanente</option>
+											<option value="21">Rural - Área Rural</option>
+											<option value="22">Rural - Chácara</option>
+											<option value="23">Rural - Granja</option>
+											<option value="24">Rural - Sítio</option>
+											<option value="25">Carta de Crédito</option>
+											<option value="26">Lançamento Imobiliário</option>
 					                	</select>
 				                  	</div>
 				                </div>
