@@ -11057,3 +11057,11 @@ form.user .form-control.form-control-user.select {
     background: #e74a3b;
     transition: 500ms;
 }
+
+.centered-btns_nav {
+    border-radius: 0 50px 50px 0;
+}
+
+.centered-btns_nav.next {
+    border-radius: 50px 0 0 50px;
+}
