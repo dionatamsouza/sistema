@@ -51,9 +51,9 @@
     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Imóveis:</h6>
-        <a class="collapse-item" href="/locacao" target="_Blank">Locação</a>
-        <a class="collapse-item" href="/venda" target="_Blank">Venda</a>
-        <a class="collapse-item" href="/rurais" target="_Blank">Rurais</a>
+        <a class="collapse-item" href="/locacao">Locação</a>
+        <a class="collapse-item" href="/venda">Venda</a>
+        <a class="collapse-item" href="/rurais">Rurais</a>
         <hr class="sidebar-divider">
         <h6 class="collapse-header">Outros:</h6>
         <a class="collapse-item" href="/avaliacao-e-pericia" >Avaliação e Perícia</a>
