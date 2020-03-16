@@ -18,5 +18,4 @@
 	<link rel="stylesheet" href="css/responsiveslides.css">
 	<script src="js/responsiveslides.min.js"></script>
   	<script src="js/responsiveslides.js"></script>
-  	<script src="js/jquery.maskMoney.js"></script>
 </head>
