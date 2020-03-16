@@ -23,18 +23,4 @@
 	<link href="css/jquery.fileuploader.min.css" media="all" rel="stylesheet">
 	<script src="js/jquery.fileuploader.min.js" type="text/javascript"></script>
 	<script src="js/custom.js" type="text/javascript"></script>
-	<style>
-		body {
-			font-family: 'Roboto', sans-serif;
-			font-size: 14px;
-            line-height: normal;
-			background-color: #fff;
-
-			margin: 0;
-			padding: 20px;
-		}
-        .fileuploader {
-            max-width: 560px;
-        }
-	</style>
 </head>
