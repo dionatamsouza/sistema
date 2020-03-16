@@ -168,7 +168,7 @@
                   <h6 class="m-0 font-weight-bold text-primary"><?php echo $omstitulo; ?></h6>
                 </div>
                 <div class="card-body">
-                  <p><strong>Descrição:</strong> <?php echo $omsdescricao; ?></p>
+                  <p><strong>Descrição:</strong> <?php echo resumo($omsdescricao, 50); ?></p>
                   <div class="col-md-2 d-inline-flex text-center">
                     <p><i class="fas fa-bed"></i> 4</p>
                   </div>
