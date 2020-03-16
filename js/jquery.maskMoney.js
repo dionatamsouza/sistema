@@ -1,4 +1,4 @@
-jQuery(function ($) {
+(function ($) {
     "use strict";
     if (!$.browser) {
         $.browser = {};
