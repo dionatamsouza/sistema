@@ -18,9 +18,4 @@
 	<link rel="stylesheet" href="css/responsiveslides.css">
 	<script src="js/responsiveslides.min.js"></script>
   	<script src="js/responsiveslides.js"></script>
-  	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-    <link href="font/font-fileuploader.css" rel="stylesheet">
-	<link href="css/jquery.fileuploader.min.css" media="all" rel="stylesheet">
-	<script src="js/jquery.fileuploader.min.js" type="text/javascript"></script>
-	<script src="js/custom.js" type="text/javascript"></script>
 </head>
