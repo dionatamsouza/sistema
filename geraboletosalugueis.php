@@ -1,21 +1,57 @@
 <?php header('Access-Control-Allow-Origin: *');  
 include_once("includes/head.php");
-
+include_once("funcoes.php");
 
 $valor=$_POST['valor'];
 $clientegerenciador=$_POST['cliente'];
 $clientepulsar=$_POST['cliente'];
 $vencimento=$_POST['data'];
-$descricao=$_POST['descricao'];
+$descricao='Aluguel';
 $opcao=$_POST['opcaobleto'];
 $vencimentop = implode('/', array_reverse(explode('/', $vencimento)));
 $locador="0";
-$locatario="0";
+
 $idboletopulsarpay='0';
 $imovel='0';
 
 $status='Aguardando';
 
+
+
+
+
+
+
+$selecionar = "SELECT * FROM financeiro_alugueis WHERE imobiliaria_creci='$lgnimobiliaria_creci' ORDER BY id ASC";
+  try {
+  	 global $bdd;
+    $resultado = $bdd->prepare($selecionar);
+    
+    $resultado->execute();
+    $entcontados = $resultado->rowCount();
+    
+   
+    
+    if($entcontados > 0) {
+      $loop = $resultado->fetchAll();
+      
+                  
+      foreach($loop as $linha) {
+        $idcliente = $linha['cliente'];
+        $vencimentoboleto=$linha['vencimento'];
+        $imovel=$linha['imovel'];
+        $vencimentopadrao=str_replace("/","-",$vencimentoboleto);
+        
+        
+        
+      buscaCliente($idcliente); 
+        
+        buscaimovel($imovel); 
+        
+        
+        echo "$valor nnnn";
+        
+        
 $inserir = "INSERT INTO financeiro_boletos(imobiliaria_creci,locador,locatario,pagador,id_boleto_pulsarpay,imovel,valor,vencimento,descricao,status) VALUES(:imobiliaria_creci, :locador, :locatario, :pagador, :id_boleto_pulsarpay, :imovel, :valor, :vencimento, :descricao, :status)";
 
 
@@ -25,12 +61,12 @@ $inserir = "INSERT INTO financeiro_boletos(imobiliaria_creci,locador,locatario,p
  	$acao = $bdd->prepare($inserir);
 $acao->bindParam(':imobiliaria_creci',$lgnimobiliaria_creci);
 $acao->bindParam(':locador',$locador);
-$acao->bindParam(':locatario',$locatario);
-$acao->bindParam(':pagador',$clientegerenciador);
+$acao->bindParam(':locatario',$idcliente);
+$acao->bindParam(':pagador',$idcliente);
 $acao->bindParam(':id_boleto_pulsarpay',$idboletopulsarpay);
 $acao->bindParam(':imovel',$imovel);
 $acao->bindParam(':valor',$valor);
-$acao->bindParam(':vencimento',$vencimentop);
+$acao->bindParam(':vencimento',$vencimentopadrao);
 $acao->bindParam(':descricao',$descricao);
 $acao->bindParam(':status',$status);
 
@@ -110,6 +146,25 @@ $alterar->execute();
   catch(PDOException $e) {
     echo $e;
   }
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+}
+}
+
+}
+
+catch(PDOException $e) {
+    echo $e;
+  }
+		
 
 
 

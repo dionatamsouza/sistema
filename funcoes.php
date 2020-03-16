@@ -388,6 +388,65 @@ catch(PDOException $e) {
 
 
 
+
+
+
+function buscaimovel ($idimovelabuscar) {
+	 global $lgnimobiliaria_creci;
+  	
+	
+	 $selecionar = "SELECT * FROM imoveis WHERE id='$idimovelabuscar' ORDER BY id ASC";
+  try {
+  	 global $bdd;
+    $resultado = $bdd->prepare($selecionar);
+    
+    $resultado->execute();
+    $entcontados = $resultado->rowCount();
+    
+   
+    
+    if($entcontados > 0) {
+      $loop = $resultado->fetchAll();
+      
+          
+      
+      
+      foreach($loop as $linha) {
+        $idimovel = $linha['id'];
+        $nomeimovel=$linha['titulo'];
+        $valor=$linha['valor'];
+               echo "$valor ++++";
+}
+}
+
+}
+
+catch(PDOException $e) {
+    echo $e;
+  }
+		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function selectCliente () {
 	 global $lgnimobiliaria_creci;
   	
@@ -424,6 +483,62 @@ catch(PDOException $e) {
   }
 		
 }
+
+
+
+
+
+
+
+
+
+
+
+function buscaCliente ($idclienteabuscar) {
+	 global $lgnimobiliaria_creci;
+  	
+	$selecionar = "SELECT * FROM financeiro_clientes WHERE id='$idclienteabuscar' ORDER BY nome ASC";
+  try {
+  	 global $bdd;
+    $resultado = $bdd->prepare($selecionar);
+    
+    $resultado->execute();
+    $entcontados = $resultado->rowCount();
+    
+   
+    
+    if($entcontados > 0) {
+      $loop = $resultado->fetchAll();
+      
+                  
+      foreach($loop as $linha) {
+        $idcliente = $linha['id'];
+        $nome=$linha['nome'];
+        $emailcliente=$linha['email'];
+        $documento=$linha['documento'];
+        
+        
+}
+}
+
+}
+
+catch(PDOException $e) {
+    echo $e;
+  }
+		
+}
+
+
+
+
+
+
+
+
+
+
+
  
  
  function base_boleto(){
@@ -664,39 +779,6 @@ function modulo_10($num) {
 
  }
 
-
-
-function senhaPulsar(){
-	App::uses('Controller', 'Controller');
-
-class AppController extends Controller {
-
-/**
- 
- */
-    public $components = array('Session', 'Auth');
-
-/**
- 
- *
- * @return void
- */
-    public function beforeFilter() {
-        // Faz com que o Auth use o Blofish
-        $this->Auth->authenticate = array('Blowfish' => array(
-            // Configura o model e os campos
-            'userModel' => 'Usuario',
-            'fields' => array(
-                'username' => 'email',
-                'password' => 'senha',
-            ),
-        ));
-
-        return parent::beforeFilter();
-    }
-
-}
-}
 
 ?>
 
