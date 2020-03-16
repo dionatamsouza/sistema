@@ -126,7 +126,7 @@
     }
   }
   else {
-    $omsselect = "SELECT * from imoveis WHERE tipo=$tipopage AND imobiliaria_creci=$lgnimobiliaria_creci";
+    $omsselect = "SELECT * from imoveis WHERE tipo_do_imovel=$tipopage AND imobiliaria_creci=$lgnimobiliaria_creci";
     try {
       $omsresult = $bdd->prepare($omsselect);
       $omsresult->execute();
