@@ -54,13 +54,6 @@
         <a class="collapse-item" href="/locacao">Locação</a>
         <a class="collapse-item" href="/venda">Venda</a>
         <a class="collapse-item" href="/rurais">Rurais</a>
-        <hr class="sidebar-divider">
-        <h6 class="collapse-header">Outros:</h6>
-        <a class="collapse-item" href="/avaliacao-e-pericia" >Avaliação e Perícia</a>
-        <a class="collapse-item" href="/auto-de-vistoria" >Auto de vistoria</a>
-        <a class="collapse-item" href="/copia-do-documento-do-imovel" >Cópia do documento do imóvel</a>
-        <a class="collapse-item" href="/copia-do-documento-do-proprietario" >Cópia do documento do proprietário</a>
-        <a class="collapse-item" href="/contrato-de-administracao" >Contrato de administração</a>
       </div>
     </div>
   </li>
@@ -70,25 +63,10 @@
     <a class="nav-link" href="/incluir-novo-funcionario"><i class="fas fa-fw fa-user"></i><span>Incluir novo funcionário</span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="<?php echo $gerenciador_site; ?>/apartments/backend/main/admin" target="_Blank"><i class="fas fa-fw fa-home"></i><span>Incluir novo imóvel</span></a>
+    <a class="nav-link" href="/incluir-novo-imovel" target="_Blank"><i class="fas fa-fw fa-home"></i><span>Incluir novo imóvel</span></a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/incluir-novo-contrato"><i class="fas fa-fw fa-file-signature"></i><span>Incluir novo contrato</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/incluir-avaliacao-e-pericia"><i class="fas fa-fw fa-file-signature"></i><span>Incluir avaliação e perícia</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/incluir-auto-de-vistoria"><i class="fas fa-fw fa-file-signature"></i><span>Incluir auto de vistoria</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/incluir-copia-do-documento-do-imovel"><i class="fas fa-fw fa-file-signature"></i><span>Incluir copia do documento do imóvel</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/incluir-copia-do-documento-do-proprietario"><i class="fas fa-fw fa-file-signature"></i><span>Incluir copia do documento do proprietário</span></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/incluir-contrato-de-administracao"><i class="fas fa-fw fa-file-signature"></i><span>Incluir contrato de administração</span></a>
   </li>
   <hr class="sidebar-divider">
   <div class="sidebar-heading">Contratos</div>
