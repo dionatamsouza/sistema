@@ -55,7 +55,7 @@ $selecionar = "SELECT * FROM financeiro_alugueis WHERE imobiliaria_creci='$lgnim
         echo " kkk $valor nnnn nomeimovel $nomeimovel";
         
         $valoraluguel=valorimovel;
-        
+        $clie=nomecliente;
         
 $inserir = "INSERT INTO financeiro_boletos(imobiliaria_creci,locador,locatario,pagador,id_boleto_pulsarpay,imovel,valor,vencimento,descricao,status) VALUES(:imobiliaria_creci, :locador, :locatario, :pagador, :id_boleto_pulsarpay, :imovel, :valor, :vencimento, :descricao, :status)";
 
@@ -85,7 +85,7 @@ $cadcontar = $acao->rowCount();
         ?>
         
         <script>
-        alert("Boleto Cadastado com sucesso!");
+        alert("Boleto gerado com sucesso paa o Inquilino <?php echo$clie ?>");
        // window.location = "incluir-cliente.php";
         
         </script>

@@ -520,7 +520,7 @@ function buscaCliente ($idclienteabuscar) {
         $nomeclientebuscou=$linha['nome'];
         $emailcliente=$linha['email'];
         $documento=$linha['documento'];
-        
+        define("nomecliente", "$nomeclientebuscou");
         
 }
 }
