@@ -388,10 +388,10 @@ catch(PDOException $e) {
 
 
 
+$valor = $valor;
 
 
-
-function buscaimovel ($idimovelabuscar) {
+function buscaimovel($idimovelabuscar) {
 	 global $lgnimobiliaria_creci;
   	
 	
@@ -414,23 +414,27 @@ function buscaimovel ($idimovelabuscar) {
       foreach($loop as $linha) {
         $idimovel = $linha['id'];
         $nomeimovel=$linha['titulo'];
+        
         $valor=$linha['valor'];
+       
+       $nomeimovel;
                echo "$valor ++++";
+               define("valorimovel", "$valor");
 }
 }
-
+echo "lll $valor ll";
 }
 
 catch(PDOException $e) {
     echo $e;
   }
-		
+	echo "lll $valor ll";	
 }
 
 
 
 
-
+echo "fff $valor ff";
 
 
 
@@ -513,19 +517,22 @@ function buscaCliente ($idclienteabuscar) {
                   
       foreach($loop as $linha) {
         $idcliente = $linha['id'];
-        $nome=$linha['nome'];
+        $nomeclientebuscou=$linha['nome'];
         $emailcliente=$linha['email'];
         $documento=$linha['documento'];
         
         
 }
 }
-
+ return $nomeclientebuscou;
 }
 
 catch(PDOException $e) {
     echo $e;
   }
+  
+  
+   $clicli=$nomeclientebuscou;
 		
 }
 

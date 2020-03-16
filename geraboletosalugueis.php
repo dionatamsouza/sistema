@@ -2,7 +2,7 @@
 include_once("includes/head.php");
 include_once("funcoes.php");
 
-$valor=$_POST['valor'];
+
 $clientegerenciador=$_POST['cliente'];
 $clientepulsar=$_POST['cliente'];
 $vencimento=$_POST['data'];
@@ -45,11 +45,16 @@ $selecionar = "SELECT * FROM financeiro_alugueis WHERE imobiliaria_creci='$lgnim
         
         
       buscaCliente($idcliente); 
+      
+      
+      echo "nome cliente $clicli";
         
         buscaimovel($imovel); 
         
+       
+        echo " kkk $valor nnnn nomeimovel $nomeimovel";
         
-        echo "$valor nnnn";
+        $valoraluguel=valorimovel;
         
         
 $inserir = "INSERT INTO financeiro_boletos(imobiliaria_creci,locador,locatario,pagador,id_boleto_pulsarpay,imovel,valor,vencimento,descricao,status) VALUES(:imobiliaria_creci, :locador, :locatario, :pagador, :id_boleto_pulsarpay, :imovel, :valor, :vencimento, :descricao, :status)";
@@ -65,7 +70,7 @@ $acao->bindParam(':locatario',$idcliente);
 $acao->bindParam(':pagador',$idcliente);
 $acao->bindParam(':id_boleto_pulsarpay',$idboletopulsarpay);
 $acao->bindParam(':imovel',$imovel);
-$acao->bindParam(':valor',$valor);
+$acao->bindParam(':valor',$valoraluguel);
 $acao->bindParam(':vencimento',$vencimentopadrao);
 $acao->bindParam(':descricao',$descricao);
 $acao->bindParam(':status',$status);
@@ -119,7 +124,7 @@ catch(PDOException $e) {
 		
 
 
-$url="https://ocv.net.br/gi/geraboleto-ocv.php?valor=&cliente=$clientepulsar&data=$vencimentop&valor=$valor&opcaoboleto=$opcao&descricao=$descricao&controle=$controle";
+$url="https://ocv.net.br/gi/geraboleto-ocv.php?valor=&cliente=$clientepulsar&data=$vencimentopadrao&valor=$valoraluguel&opcaoboleto=$opcao&descricao=$descricao&controle=$controle";
 $result=file_get_contents($url);
 echo $result;
 
