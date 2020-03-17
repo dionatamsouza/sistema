@@ -1675,7 +1675,7 @@ pre code {
 
 @media (max-width: 767.98px) {
   .sidebar {
-    display: none;
+    display: none !important;
   }
   .table-responsive-md {
     display: block;
@@ -10221,7 +10221,7 @@ a:focus {
 }
 
 .sidebar.toggled {
-  display: block;
+  display: block !important;
 }
 
 .sidebar.toggled #sidebarToggle::after {
