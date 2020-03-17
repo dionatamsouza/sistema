@@ -1674,6 +1674,9 @@ pre code {
 }
 
 @media (max-width: 767.98px) {
+  .sidebar {
+    display: none;
+  }
   .table-responsive-md {
     display: block;
     width: 100%;
@@ -10218,8 +10221,7 @@ a:focus {
 }
 
 .sidebar.toggled {
-  width: 0 !important;
-  overflow: hidden;
+  display: block;
 }
 
 .sidebar.toggled #sidebarToggle::after {
