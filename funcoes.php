@@ -434,15 +434,6 @@ catch(PDOException $e) {
 
 
 
-echo "fff $valor ff";
-
-
-
-
-
-
-
-
 
 
 
