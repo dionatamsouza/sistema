@@ -82,6 +82,7 @@
   <li class="nav-item">
     <a class="nav-link" href="/contratos-arrendamento"><i class="fas fa-fw fa-file-signature"></i><span>Arrendamento</span></a>
   </li>
+  <hr class="sidebar-divider">
   <div class="sidebar-heading">Financeiro</div>
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
@@ -105,11 +106,8 @@
         <a class="collapse-item" href="gerar-boleto-alugueis">Gerar boletos de alugueis</a>
         <a class="collapse-item" href="gerar-boleto">Gerar boleto avulso</a>
         <a class="collapse-item" href="aaa">Listar Boletos</a>
-        
         <a class="collapse-item" href="incluir-cliente">Incluir Cliente</a>
-        
-         <a class="collapse-item" href="listar-clientes">Listar Cientes</a>
-        
+        <a class="collapse-item" href="listar-clientes">Listar Cientes</a>
       </div>
     </div>
   </li>
@@ -138,39 +136,14 @@
       </div>
     </div>
   </li>
-  
-  
-  
-  
-   <li class="nav-item">
+  <li class="nav-item">
     <a class="nav-link" href="alugar-imovel"><i class="fas fa-fw fa-home"></i><span>Alugar Imóvel</span></a>
   </li>
-  
-  
    <li class="nav-item">
     <a class="nav-link" href="desalugar-imovel" ><i class="fas fa-fw fa-home"></i><span>Desalugar Imóvel</span></a>
   </li>
-  
-  
-  
   <hr class="sidebar-divider d-none d-md-block">
   <div class="text-center d-none d-md-inline">
     <button class="rounded-circle border-0" id="sidebarToggle"></button>
   </div>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
