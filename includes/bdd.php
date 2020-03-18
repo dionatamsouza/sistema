@@ -365,8 +365,8 @@ function Redimensionarjpeg($imagemred, $name, $largura, $pasta){
       	
       	$nome=$arquivo['tmp_name'][$controle];
       	
-      	$foto="$destino/$nome";
-          $name="$destino/$nome";
+      	$foto="$destinobdd";
+          $name="$destinobdd";
           $pasta="$destino";
 	      Redimensionarjpeg($foto, $name, 800, "images");
 	      
