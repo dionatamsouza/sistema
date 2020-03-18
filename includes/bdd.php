@@ -316,38 +316,20 @@
   }
   //-----------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-### Função para redimensionar a imagem caso ela seja maior que 800 pixels de largura by NETSITES LAURO DANIEL ####
-
-function Redimensionarjpeg($imagemred, $name, $largura, $pasta){
-            $img = imagecreatefromjpeg($imagemred);
-            $x   = imagesx($img);
-            $y   = imagesy($img);
-            $altura = ($largura * $y)/$x;
-            $nova = imagecreatetruecolor($largura, $altura);
-            imagecopyresampled($nova, $img, 0, 0, 0, 0, $largura, $altura, $x, $y);
-            imagejpeg($nova, "$name",100);
-            imagedestroy($img);
-            imagedestroy($nova);
-            return $name;
-      }
-	  
-### termina a função para redimensionar ###	 
-
-
-
-
-
+  //Redimencionar imagem
+  function Redimensionarjpeg($imagemred, $name, $largura, $pasta) {
+    $img = imagecreatefromjpeg($imagemred);
+    $x   = imagesx($img);
+    $y   = imagesy($img);
+    $altura = ($largura * $y)/$x;
+    $nova = imagecreatetruecolor($largura, $altura);
+    imagecopyresampled($nova, $img, 0, 0, 0, 0, $largura, $altura, $x, $y);
+    imagejpeg($nova, "$name",100);
+    imagedestroy($img);
+    imagedestroy($nova);
+    return $name;
+  }
+  //-----------------------------------------------------------------------------------
 
   //cadastrar imóvel
   if(isset($_POST['cadastrar-imovel'])) {
@@ -359,23 +341,11 @@ function Redimensionarjpeg($imagemred, $name, $largura, $pasta){
       $destinobdd = $diretoriobdd.$arquivo['name'][$controle];
       $destino = $diretorio.$arquivo['name'][$controle];
       if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)) {
-      	
-      	
-      	///// REdimensionamento aqui /////
-      	
       	$nome=$destinobdd;
-      	
-      	$foto="$destinobdd";
-          $name="$destinobdd";
-          
-          echo "++$foto";
-          
-          $pasta="$destino";
+      	$foto="../$destinobdd";
+        $name="../$destinobdd";
+        $pasta="$destino";
 	      Redimensionarjpeg($foto, $name, 800, "images");
-	      
-	      /////////////////////////////
-      	
-      	
         $cadinsert = "INSERT into fotos_imovel (id_imovel, file) VALUES (:id_imovel, :file)";
         try {
           $cadresult = $bdd->prepare($cadinsert);
