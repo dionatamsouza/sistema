@@ -1,5 +1,5 @@
 jQuery(function ($) {
-  $("#slider").responsiveSlides({
+  $("#slider0").responsiveSlides({
     auto: false,
     pager: false,
     nav: true,
