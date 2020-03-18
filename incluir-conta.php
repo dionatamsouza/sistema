@@ -58,7 +58,7 @@
 				              	<div class="form-group row">
 				              		<div class="col-sm-6 mb-3 mb-sm-0">
 					                	<select class="form-control form-control-user select" name="tipodeconta" required>
-					                		<option value="">Tipo de conta</option>
+					                		<option value selected disabled>Tipo de conta</option>
 					                		<option value="1">Conta a Receber</option>
 											<option value="2">Conta a Pagar</option>
 					                	</select>

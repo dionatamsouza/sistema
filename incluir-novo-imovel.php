@@ -29,7 +29,7 @@
                 				<div class="form-group row">
 				                  	<div class="col-sm-6 mb-3 mb-sm-0">
 				                    	<select class="form-control form-control-user select" name="tipo" required>
-					                		<option value disabled>Selecione o tipo</option>
+					                		<option value selected disabled>Selecione o tipo</option>
 					                		<option value="1">Locação</option>
 											<option value="2">Venda</option>
 											<option value="3">Rurais</option>
@@ -37,7 +37,7 @@
 				                  	</div>
 				                  	<div class="col-sm-6">
 				                    	<select class="form-control form-control-user select" name="tipodepropriedade" required>
-					                		<option value disabled>Selecione o tipo de propriedade</option>
+					                		<option value selected disabled>Selecione o tipo de propriedade</option>
 					                		<option value="1">Comercial - Área Comercial</option>
 											<option value="2">Comercial - Barracão</option>
 											<option value="3">Comercial - Empresa</option>
@@ -76,12 +76,12 @@
 				                  	</div>
 				                  	<div class="col-sm-4">
 				                  		<select class="form-control form-control-user select" name="estado" id="uf" disabled data-target="#cidade">
-									        <option value="">Estado</option>
+									        <option value="" selected disabled>Estado</option>
 									    </select>
 				                  	</div>
 				                  	<div class="col-sm-4">
 				                    	<select class="form-control form-control-user select" name="municipio" id="cidade" disabled required>
-					                		<option value>Selecione o município</option>
+					                		<option value selected disabled>Selecione o município</option>
 					                	</select>
 				                  	</div>
 				                </div>

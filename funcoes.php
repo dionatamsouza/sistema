@@ -359,7 +359,7 @@ function selectImoveis () {
     if($entcontados > 0) {
       $loop = $resultado->fetchAll();
       
-      echo "<select class='form-control form-control-user select' name='imovel'>	<option value=''>Escolha o Imóvel</option>";
+      echo "<select class='form-control form-control-user select' name='imovel'>	<option value selected disabled>Escolha o Imóvel</option>";
       
       
       
@@ -458,7 +458,7 @@ function selectCliente () {
     if($entcontados > 0) {
       $loop = $resultado->fetchAll();
       
-      echo "<select class='form-control form-control-user select' name='cliente'>	<option value=''>Escolha o Cliente</option>";
+      echo "<select class='form-control form-control-user select' name='cliente'>	<option value selected disabled>Escolha o Cliente</option>";
       
       
       
