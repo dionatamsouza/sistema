@@ -43,7 +43,7 @@
 				  
 				  
 				    <div class="col-sm-6">	
-							<input type="text" class="form-control form-control-user" id="data" name="data" placeholder="Data de vencimento" autocomplete="off" >
+							<input type="text" class="form-control form-control-user date" id="data" name="data" placeholder="Data de vencimento" autocomplete="off" maxlength="10">
 							
 								<span class="glyphicon glyphicon-th"></span>
 						
@@ -67,7 +67,7 @@
 				  
 				  
 				   <div class="col-sm-6">	
-							<input type="text" class="form-control form-control-user" id="valor" name="valor" placeholder="Valor" autocomplete="off" >
+							<input type="text" class="form-control form-control-user money" id="valor" name="valor" placeholder="Valor" autocomplete="off" >
 				  
 				  
 				  </div>

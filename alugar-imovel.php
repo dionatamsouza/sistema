@@ -45,7 +45,7 @@
 				  
 <div class="form-group row">				  
 				   <div class="col-sm-6 mb-3 mb-sm-0">
-				<input type="text" class="form-control form-control-user" id="vencimento" name="vencimento" placeholder="vencimento" >
+				<input type="text" class="form-control form-control-user date" id="vencimento" name="vencimento" placeholder="vencimento" maxlength="10">
 							
 								<span class="glyphicon glyphicon-th"></span>
 						

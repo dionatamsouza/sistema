@@ -34,7 +34,7 @@
 				                  	</div>
 				                  	
 				                  	<div class="col-sm-6">
-				                    	<input type="text" class="form-control form-control-user" placeholder="Valor" name="valor" type="number" required>
+				                    	<input type="text" class="form-control form-control-user money" placeholder="Valor" name="valor" type="number" required>
 				  
 </div>
 </div>
@@ -45,7 +45,7 @@
 				                 </div>   
 				                    		
 				                    <div class="col-sm-6">	
-							<input type="text" class="form-control form-control-user" id="data" name="data" placeholder="Data" >
+							<input type="text" class="form-control form-control-user date" id="data" name="data" placeholder="Data" maxlength="10">
 							
 								<span class="glyphicon glyphicon-th"></span>
 						

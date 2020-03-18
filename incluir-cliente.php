@@ -35,7 +35,7 @@
 				                  	</div>
 				                  	
 				                  	<div class="col-sm-6">
-				                    		<input type="text" class="form-control form-control-user" placeholder="CPF/CNPJ" name="cpfcnpj" required>
+				                    		<input type="text" class="form-control form-control-user cpf" placeholder="CPF/CNPJ" name="cpfcnpj" maxlength="14" required>
 				                    
 				                 </div>   
 </div>
@@ -71,7 +71,7 @@
 					                </div>
 					               
 					                	<div class="col-sm-6 mb-3 mb-sm-0">
-					                	<input type="text" class="form-control form-control-user" placeholder="Data de nascimento" name="datanascimento" id="datanascimento" type="text" required>
+					                	<input type="text" class="form-control form-control-user date" placeholder="Data de nascimento" name="datanascimento" id="datanascimento" type="text" maxlength="10" required>
 					                	 <script type="text/javascript">
 			$('#datanascimento').datepicker({	
 				format: "dd/mm/yyyy",	
@@ -87,11 +87,11 @@
 	
 		<div class="form-group row">
 				              		<div class="col-sm-6 mb-3 mb-sm-0">
-					                	<input type="text" class="form-control form-control-user" placeholder="Telefone Cliente" name="telefone" type="text" required>
+					                	<input type="text" class="form-control form-control-user sp_celphones" placeholder="Telefone Cliente" name="telefone" type="text" maxlength="15" required>
 					                </div>
 					               
 					                	<div class="col-sm-6 mb-3 mb-sm-0">
-					                	<input type="text" class="form-control form-control-user" placeholder="CEP" name="cep" id="cep" type="text" required>
+					                	<input type="text" class="form-control form-control-user cep" placeholder="CEP" name="cep" id="cep" type="text" maxlength="9" required>
 					                	
 					                </div>
 				              	</div>
@@ -119,7 +119,7 @@
 					                
 					                
 					                <div class="col-sm-6 mb-3 mb-sm-0">
-					                	<input type="text" class="form-control form-control-user" placeholder="WhatsApp" name="whatsapp" type="text">
+					                	<input type="text" class="form-control form-control-user sp_celphones" placeholder="WhatsApp" name="whatsapp" type="text" maxlength="15">
 					                </div>
 					               
 					                
