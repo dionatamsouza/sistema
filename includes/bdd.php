@@ -341,12 +341,13 @@
       $destinobdd = $diretoriobdd.$arquivo['name'][$controle];
       $destino = $diretorio.$arquivo['name'][$controle];
       if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)) {
-        echo "Fez upload";
+
         $nome=$arquivo['name'][$controle];
         $foto="../$destinobdd";
         $name="../$destinobdd";
         $pasta="$destino";
-        Redimensionarjpeg($foto, $name, 800, "images");
+        Redimensionarjpeg($foto, $name, 800, "imgs/imoveis");
+
         $cadinsert = "INSERT into fotos_imovel (id_imovel, file) VALUES (:id_imovel, :file)";
         try {
           $cadresult = $bdd->prepare($cadinsert);
