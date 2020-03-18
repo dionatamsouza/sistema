@@ -346,7 +346,7 @@
         $foto="$destinobdd";
         $name="$destinobdd";
         $pasta="$destino";
-        Redimensionarjpeg($foto, $name, 800, "/imgs/imoveis/");
+        Redimensionarjpeg($foto, $name, 800, "imgs/imoveis/");
 
         $cadinsert = "INSERT into fotos_imovel (id_imovel, file) VALUES (:id_imovel, :file)";
         try {
