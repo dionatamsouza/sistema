@@ -367,6 +367,9 @@ function Redimensionarjpeg($imagemred, $name, $largura, $pasta){
       	
       	$foto="$destinobdd";
           $name="$destinobdd";
+          
+          acho "++$foto";
+          
           $pasta="$destino";
 	      Redimensionarjpeg($foto, $name, 800, "images");
 	      
