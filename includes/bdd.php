@@ -343,7 +343,7 @@
       if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)) {
 
         $nome=$arquivo['name'][$controle];
-        $foto="../$destinobdd";
+        echo $foto="../$destinobdd";
         $name="../$destinobdd";
         $pasta="$destino";
         Redimensionarjpeg($foto, $name, 800, "/imgs/imoveis/");
