@@ -386,7 +386,7 @@ function Redimensionarjpeg($imagemred, $name, $largura, $pasta){
         }
       }
     }
-    $cadinsert = "INSERT into imoveis (tipo, tipo_de_propriedade, pais, estado, municipio, endereco, valor, titulo, descricao, numero_de_dormitorios, area_construida, area_terreno_total, id_imovel, imobiliaria_creci) VALUES (:tipo, :tipo_de_propriedade, :pais, :estado, :municipio, :endereco, :valor, :titulo, :descricao, :numero_de_dormitorios, :area_construida, :area_terreno_total, :id_imovel, :imobiliaria_creci)";
+    $cadinsert = "INSERT into imoveis (tipo, tipo_de_propriedade, pais, estado, municipio, endereco, valor, titulo, descricao, numero_de_dormitorios, area_construida, area_terreno_total, edicula, horta, jardim, pomar, areadeservico, bar, biblioteca, closet, copa, despensa, escritorio, lareira, lavabo, saladeestar, saladeginastica, saladejantar, saladetv, acessoadeficientes, geradordeenergia, guarita, lavanderiacoletiva, medicaoaguaindividual, portaria24horas, areaverde, bicicletario, brinquedoteca, campodefutebolsuico, churrasqueira, duchaexterna, pesqueiro, piscina, playground, quadradeesportes, quadratenis, salaginasticafitness, salaodefestas, salaodejogos, sauna, alarme, cameradevigilancia, fechadurareforcada, interfone, murocomcercaeletrica, portaoeletronico, vigilancia24h, id_imovel, imobiliaria_creci) VALUES (:tipo, :tipo_de_propriedade, :pais, :estado, :municipio, :endereco, :valor, :titulo, :descricao, :numero_de_dormitorios, :area_construida, :area_terreno_total, :edicula, :horta, :jardim, :pomar, :areadeservico, :bar, :biblioteca, :closet, :copa, :despensa, :escritorio, :lareira, :lavabo, :saladeestar, :saladeginastica, :saladejantar, :saladetv, :acessoadeficientes, :geradordeenergia, :guarita, :lavanderiacoletiva, :medicaoaguaindividual, :portaria24horas, :areaverde, :bicicletario, :brinquedoteca, :campodefutebolsuico, :churrasqueira, :duchaexterna, :pesqueiro, :piscina, :playground, :quadradeesportes, :quadratenis, :salaginasticafitness, :salaodefestas, :salaodejogos, :sauna, :alarme, :cameradevigilancia, :fechadurareforcada, :interfone, :murocomcercaeletrica, :portaoeletronico, :vigilancia24h, :id_imovel, :imobiliaria_creci)";
     try {
       $cadresult = $bdd->prepare($cadinsert);
       $cadresult->bindParam(':tipo' , $_POST['tipo'], PDO::PARAM_STR);
@@ -401,6 +401,51 @@ function Redimensionarjpeg($imagemred, $name, $largura, $pasta){
       $cadresult->bindParam(':numero_de_dormitorios' , $_POST['numerodedormitorios'], PDO::PARAM_STR);
       $cadresult->bindParam(':area_construida' , $_POST['areaconstruida'], PDO::PARAM_STR);
       $cadresult->bindParam(':area_terreno_total' , $_POST['areaterrenototal'], PDO::PARAM_STR);
+      $cadresult->bindParam(':edicula' , $_POST['edicula'], PDO::PARAM_STR);
+      $cadresult->bindParam(':horta' , $_POST['horta'], PDO::PARAM_STR);
+      $cadresult->bindParam(':jardim' , $_POST['jardim'], PDO::PARAM_STR);
+      $cadresult->bindParam(':pomar' , $_POST['pomar'], PDO::PARAM_STR);
+      $cadresult->bindParam(':areadeservico' , $_POST['areadeservico'], PDO::PARAM_STR);
+      $cadresult->bindParam(':bar' , $_POST['bar'], PDO::PARAM_STR);
+      $cadresult->bindParam(':biblioteca' , $_POST['biblioteca'], PDO::PARAM_STR);
+      $cadresult->bindParam(':closet' , $_POST['closet'], PDO::PARAM_STR);
+      $cadresult->bindParam(':copa' , $_POST['copa'], PDO::PARAM_STR);
+      $cadresult->bindParam(':despensa' , $_POST['despensa'], PDO::PARAM_STR);
+      $cadresult->bindParam(':escritorio' , $_POST['escritorio'], PDO::PARAM_STR);
+      $cadresult->bindParam(':lareira' , $_POST['lareira'], PDO::PARAM_STR);
+      $cadresult->bindParam(':lavabo' , $_POST['lavabo'], PDO::PARAM_STR);
+      $cadresult->bindParam(':saladeestar' , $_POST['saladeestar'], PDO::PARAM_STR);
+      $cadresult->bindParam(':saladeginastica' , $_POST['saladeginastica'], PDO::PARAM_STR);
+      $cadresult->bindParam(':saladejantar' , $_POST['saladejantar'], PDO::PARAM_STR);
+      $cadresult->bindParam(':saladetv' , $_POST['saladetv'], PDO::PARAM_STR);
+      $cadresult->bindParam(':acessoadeficientes' , $_POST['acessoadeficientes'], PDO::PARAM_STR);
+      $cadresult->bindParam(':geradordeenergia' , $_POST['geradordeenergia'], PDO::PARAM_STR);
+      $cadresult->bindParam(':guarita' , $_POST['guarita'], PDO::PARAM_STR);
+      $cadresult->bindParam(':lavanderiacoletiva' , $_POST['lavanderiacoletiva'], PDO::PARAM_STR);
+      $cadresult->bindParam(':medicaoaguaindividual' , $_POST['medicaoaguaindividual'], PDO::PARAM_STR);
+      $cadresult->bindParam(':portaria24horas' , $_POST['portaria24horas'], PDO::PARAM_STR);
+      $cadresult->bindParam(':areaverde' , $_POST['areaverde'], PDO::PARAM_STR);
+      $cadresult->bindParam(':bicicletario' , $_POST['bicicletario'], PDO::PARAM_STR);
+      $cadresult->bindParam(':brinquedoteca' , $_POST['brinquedoteca'], PDO::PARAM_STR);
+      $cadresult->bindParam(':campodefutebolsuico' , $_POST['campodefutebolsuico'], PDO::PARAM_STR);
+      $cadresult->bindParam(':churrasqueira' , $_POST['churrasqueira'], PDO::PARAM_STR);
+      $cadresult->bindParam(':duchaexterna' , $_POST['duchaexterna'], PDO::PARAM_STR);
+      $cadresult->bindParam(':pesqueiro' , $_POST['pesqueiro'], PDO::PARAM_STR);
+      $cadresult->bindParam(':piscina' , $_POST['piscina'], PDO::PARAM_STR);
+      $cadresult->bindParam(':playground' , $_POST['playground'], PDO::PARAM_STR);
+      $cadresult->bindParam(':quadradeesportes' , $_POST['quadradeesportes'], PDO::PARAM_STR);
+      $cadresult->bindParam(':quadratenis' , $_POST['quadratenis'], PDO::PARAM_STR);
+      $cadresult->bindParam(':salaginasticafitness' , $_POST['salaginasticafitness'], PDO::PARAM_STR);
+      $cadresult->bindParam(':salaodefestas' , $_POST['salaodefestas'], PDO::PARAM_STR);
+      $cadresult->bindParam(':salaodejogos' , $_POST['salaodejogos'], PDO::PARAM_STR);
+      $cadresult->bindParam(':sauna' , $_POST['sauna'], PDO::PARAM_STR);
+      $cadresult->bindParam(':alarme' , $_POST['alarme'], PDO::PARAM_STR);
+      $cadresult->bindParam(':cameradevigilancia' , $_POST['cameradevigilancia'], PDO::PARAM_STR);
+      $cadresult->bindParam(':fechadurareforcada' , $_POST['fechadurareforcada'], PDO::PARAM_STR);
+      $cadresult->bindParam(':interfone' , $_POST['interfone'], PDO::PARAM_STR);
+      $cadresult->bindParam(':murocomcercaeletrica' , $_POST['murocomcercaeletrica'], PDO::PARAM_STR);
+      $cadresult->bindParam(':portaoeletronico' , $_POST['portaoeletronico'], PDO::PARAM_STR);
+      $cadresult->bindParam(':vigilancia24h' , $_POST['vigilancia24h'], PDO::PARAM_STR);
       $cadresult->bindParam(':id_imovel' , $id_imovel, PDO::PARAM_STR);
       $cadresult->bindParam(':imobiliaria_creci' , $lgnimobiliaria_creci, PDO::PARAM_STR);
       $cadresult->execute();
