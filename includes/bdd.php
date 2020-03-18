@@ -341,6 +341,7 @@
       $destinobdd = $diretoriobdd.$arquivo['name'][$controle];
       $destino = $diretorio.$arquivo['name'][$controle];
       if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)) {
+        echo "Fez upload";
         $nome=$arquivo['name'][$controle];
         $foto="../$destinobdd";
         $name="../$destinobdd";
