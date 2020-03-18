@@ -136,6 +136,7 @@
           $omsid = $omsmost->id;
           $omstitulo = $omsmost->titulo;
           $omsdescricao = $omsmost->descricao;
+          $omsvalor = $omsmost->valor;
           $omsidimovel = $omsmost->id_imovel;
 ?>
           <script type="text/javascript">
@@ -180,6 +181,7 @@
                   <h6 class="m-0 font-weight-bold text-primary"><?php echo $omstitulo; ?></h6>
                 </div>
                 <div class="card-body">
+                  <p><strong>Valor:</strong> <?php echo $omsvalor; ?></p>
                   <p><strong>Descrição:</strong> <?php echo resumo($omsdescricao, 50); ?></p>
                   <div class="col-md-2 d-inline-flex text-center">
                     <p><i class="fas fa-bed"></i> 4</p>
