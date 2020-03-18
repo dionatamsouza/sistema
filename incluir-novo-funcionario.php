@@ -62,7 +62,7 @@
 					                	</select>
 					                </div>
 					                <div class="col-sm-6">
-					                	<input type="text" class="form-control form-control-user" placeholder="Telefone" name="telefone" required>
+					                	<input type="text" class="form-control form-control-user sp_celphones" placeholder="Telefone" name="telefone" maxlength="15" required>
 					                </div>
 				              	</div>
 				              	<div class="form-group">
