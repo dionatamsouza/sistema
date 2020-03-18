@@ -42,7 +42,7 @@
 				              	</div>
 				              	<div class="form-group row">
 				              		<div class="col-sm-6 mb-3 mb-sm-0">
-					                	<select class="form-control form-control-user select" name="cargo" selected disabled required>
+					                	<select class="form-control form-control-user select" name="cargo" required>
 					                		<option value>Selecione o cargo</option>
 					                		<option value="1">Presidente</option>
 											<option value="2">Vice Presidente</option>
