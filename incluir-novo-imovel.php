@@ -107,8 +107,204 @@
 				                  	<div class="col-sm-4 mb-3 mb-sm-0">
 					                	<input type="number" class="form-control form-control-user" placeholder="Área terreno total" name="areaterrenototal" required>
 				                  	</div>
-				                 </div>
-				                 <div class="form-group">
+			                 	</div>
+				                <div class="form-group">
+									<div class="sidebar-heading">Espaço Externo</div><hr class="sidebar-divider margin-top-0">
+									<div class="checkbox">
+										<input type="checkbox" id="edicula" name="edicula">
+										<label for="edicula">Edícula</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="horta" name="horta">
+									    <label for="horta">Horta</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="jardim" name="jardim">
+									    <label for="jardim">Jardim</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="pomar" name="pomar">
+									    <label for="pomar">Pomar</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="sidebar-heading">Espaço Interno</div><hr class="sidebar-divider margin-top-0">
+									<div class="checkbox">
+										<input type="checkbox" id="areadeservico" name="areadeservico">
+										<label for="areadeservico">Área de Serviço</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="bar" name="bar">
+										<label for="bar">Bar</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="biblioteca" name="biblioteca">
+										<label for="biblioteca">Biblioteca</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="closet" name="closet">
+										<label for="closet">Closet</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="copa" name="copa">
+										<label for="copa">Copa</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="despensa" name="despensa">
+										<label for="despensa">Despensa</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="escritorio" name="escritorio">
+										<label for="escritorio">Escritório</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="lareira" name="lareira">
+										<label for="lareira">Lareira</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="lavabo" name="lavabo">
+										<label for="lavabo">Lavabo</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="saladeestar" name="saladeestar">
+										<label for="saladeestar">Sala de Estar</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="saladeginastica" name="saladeginastica">
+										<label for="saladeginastica">Sala de Ginástica</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="saladejantar" name="saladejantar">
+										<label for="saladejantar">Sala de Jantar</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="saladetv" name="saladetv">
+										<label for="saladetv">Sala de TV</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="sidebar-heading">Condomínio</div><hr class="sidebar-divider margin-top-0">
+									<div class="checkbox">
+										<input type="checkbox" id="acessoadeficientes" name="acessoadeficientes">
+										<label for="acessoadeficientes">Acesso à Deficientes</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="geradordeenergia" name="geradordeenergia">
+									    <label for="geradordeenergia">Gerador de Energia</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="guarita" name="guarita">
+									    <label for="guarita">Guarita</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="lavanderiacoletiva" name="lavanderiacoletiva">
+									    <label for="lavanderiacoletiva">Lavanderia Coletiva</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="medicaoaguaindividual" name="medicaoaguaindividual">
+									    <label for="medicaoaguaindividual">Medição Água Individual</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="portaria24horas" name="portaria24horas">
+									    <label for="portaria24horas">Portaria 24 Horas</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="sidebar-heading">Lazer/Entretendimento</div><hr class="sidebar-divider margin-top-0">
+									<div class="checkbox">
+										<input type="checkbox" id="areaverde" name="areaverde">
+										<label for="areaverde">Área Verde</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="bicicletario" name="bicicletario">
+									    <label for="bicicletario">Bicicletário</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="brinquedoteca" name="brinquedoteca">
+									    <label for="brinquedoteca">Brinquedoteca</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="campodefutebolsuico" name="campodefutebolsuico">
+									    <label for="campodefutebolsuico">Campo de Futebol Suíço</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="churrasqueira" name="churrasqueira">
+									    <label for="churrasqueira">Churrasqueira</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="duchaexterna" name="duchaexterna">
+									    <label for="duchaexterna">Ducha externa</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="pesqueiro" name="pesqueiro">
+									    <label for="pesqueiro">Pesqueiro</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="piscina" name="piscina">
+									    <label for="piscina">Piscina</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="playground" name="playground">
+									    <label for="playground">Playground</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="quadradeesportes" name="quadradeesportes">
+									    <label for="quadradeesportes">Quadra de Esportes</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="quadratenis" name="quadratenis">
+									    <label for="quadratenis">Quadra Tênis</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="salaginasticafitness" name="salaginasticafitness">
+									    <label for="salaginasticafitness">Sala Ginástica/Fitness</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="salaodefestas" name="salaodefestas">
+									    <label for="salaodefestas">Salão de Festas</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="salaodejogos" name="salaodejogos">
+									    <label for="salaodejogos">Salão de Jogos</label>
+									</div>
+									<div class="checkbox">
+									    <input type="checkbox" id="sauna" name="sauna">
+									    <label for="sauna">Sauna</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="sidebar-heading">Segurança</div><hr class="sidebar-divider margin-top-0">
+									<div class="checkbox">
+										<input type="checkbox" id="alarme" name="alarme">
+										<label for="alarme">Alarme</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="cameradevigilancia" name="cameradevigilancia">
+										<label for="cameradevigilancia">Câmera de vigilância</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="fechadurareforcada" name="fechadurareforcada">
+										<label for="fechadurareforcada">Fechadura reforçada</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="interfone" name="interfone">
+										<label for="interfone">Interfone</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="murocomcercaeletrica" name="murocomcercaeletrica">
+										<label for="murocomcercaeletrica">Muro com cerca elétrica</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="portaoeletronico" name="portaoeletronico">
+										<label for="portaoeletronico">Portão Eletrônico</label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="vigilancia24h" name="vigilancia24h">
+										<label for="vigilancia24h">Vigilância 24h</label>
+									</div>
+								</div>
+								<hr class="sidebar-divider">
+				                <div class="form-group">
 				                  	<input type="file" class="form-control form-control-user select" name="fotoimovel[]" multiple required>
 				                </div>
 				              	<input type="submit" name="cadastrar-imovel" class="btn btn-primary btn-user btn-block" value="Cadastrar imóvel">
