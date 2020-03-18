@@ -143,7 +143,7 @@
               <a class="btn-trash" href="aaaa"><i class="fas fa-times"></i></a>
               <a href="?imoveis=<?php echo $omsid; ?>">
                 <div class="rslides_container">
-                  <ul class="rslides" id="slider1">
+                  <ul class="rslides" id="slider<?php echo $omsid; ?>">
 <?php
                     $omsselecte = "SELECT * from fotos_imovel WHERE id_imovel='$omsidimovel'";
                     try {
