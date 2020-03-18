@@ -25,7 +25,7 @@
               <div class="card shadow mb-4">
                 <a class="btn-trash" href="aaaa"><i class="fas fa-times"></i></a>
                 <div class="rslides_container">
-                  <ul class="rslides" id="slider1">
+                  <ul class="rslides" id="slider">
 <?php
                     $omsselecte = "SELECT * from fotos_imovel WHERE id_imovel='$omsidimovel'";
                     try {

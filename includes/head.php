@@ -18,4 +18,5 @@
 	<link rel="stylesheet" href="css/themes.css">
 	<link rel="stylesheet" href="css/responsiveslides.css">
 	<script src="js/responsiveslides.min.js"></script>
+	<script src="js/responsiveslides.js"></script>
 </head>
