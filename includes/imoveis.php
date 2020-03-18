@@ -138,6 +138,18 @@
           $omsdescricao = $omsmost->descricao;
           $omsidimovel = $omsmost->id_imovel;
 ?>
+          <script type="text/javascript">
+            jQuery(function ($) {
+              $("#slider<?php echo $omsid; ?>").responsiveSlides({
+                auto: false,
+                pager: false,
+                nav: true,
+                speed: 500,
+                maxwidth: 800,
+                namespace: "centered-btns"
+              });
+            });
+          </script>
           <div class="col-lg-3">
             <div class="card shadow mb-4 scale">
               <a class="btn-trash" href="aaaa"><i class="fas fa-times"></i></a>
