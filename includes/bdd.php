@@ -317,18 +317,21 @@
   //-----------------------------------------------------------------------------------
 
   //Redimencionar imagem
-  function Redimensionarjpeg($imagemred, $name, $largura, $pasta) {
-    $img = imagecreatefromjpeg($imagemred);
-    $x   = imagesx($img);
-    $y   = imagesy($img);
-    $altura = ($largura * $y)/$x;
-    $nova = imagecreatetruecolor($largura, $altura);
-    imagecopyresampled($nova, $img, 0, 0, 0, 0, $largura, $altura, $x, $y);
-    imagejpeg($nova, "$name",100);
-    imagedestroy($img);
-    imagedestroy($nova);
-    return $name;
-  }
+  function Redimensionarjpeg($imagemred, $name, $largura, $pasta){
+            $img = imagecreatefromjpeg($imagemred);
+            $x   = imagesx($img);
+            $y   = imagesy($img);
+            $altura = ($largura * $y)/$x;
+            $nova = imagecreatetruecolor($largura, $altura);
+            imagecopyresampled($nova, $img, 0, 0, 0, 0, $largura, $altura, $x, $y);
+            imagejpeg($nova, "$name",100);
+            imagedestroy($img);
+            imagedestroy($nova);
+            return $name;
+            
+            echo "redimensionou";
+            
+      }
   //-----------------------------------------------------------------------------------
 
   //cadastrar imóvel
