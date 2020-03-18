@@ -318,20 +318,17 @@
 
   //Redimencionar imagem
   function Redimensionarjpeg($imagemred, $name, $largura, $pasta){
-            $img = imagecreatefromjpeg($imagemred);
-            $x   = imagesx($img);
-            $y   = imagesy($img);
-            $altura = ($largura * $y)/$x;
-            $nova = imagecreatetruecolor($largura, $altura);
-            imagecopyresampled($nova, $img, 0, 0, 0, 0, $largura, $altura, $x, $y);
-            imagejpeg($nova, "$name",100);
-            imagedestroy($img);
-            imagedestroy($nova);
-            return $name;
-            
-            echo "redimensionou";
-            
-      }
+    $img = imagecreatefromjpeg($imagemred);
+    $x   = imagesx($img);
+    $y   = imagesy($img);
+    $altura = ($largura * $y)/$x;
+    $nova = imagecreatetruecolor($largura, $altura);
+    imagecopyresampled($nova, $img, 0, 0, 0, 0, $largura, $altura, $x, $y);
+    imagejpeg($nova, "$name",100);
+    imagedestroy($img);
+    imagedestroy($nova);
+    return $name;
+  }
   //-----------------------------------------------------------------------------------
 
   //cadastrar imóvel
@@ -344,22 +341,11 @@
       $destinobdd = $diretoriobdd.$arquivo['name'][$controle];
       $destino = $diretorio.$arquivo['name'][$controle];
       if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)) {
-      	
         $nome=$arquivo['name'][$controle];
-        
         $foto="../$destinobdd";
-          $name="../$destinobdd";
-          
-          echo "<img src='$foto'>";
-          
-          $pasta="$destino";
+        $name="../$destinobdd";
+        $pasta="$destino";
         Redimensionarjpeg($foto, $name, 800, "images");
-
-
-
-
-
-
         $cadinsert = "INSERT into fotos_imovel (id_imovel, file) VALUES (:id_imovel, :file)";
         try {
           $cadresult = $bdd->prepare($cadinsert);
