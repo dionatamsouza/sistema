@@ -332,21 +332,21 @@
         $nome=$arquivo['name'][$controle];
         
         $foto="$destinobdd";
-          $name="$destinobdd";
-          
-          $largura='800';
-          $img = imagecreatefromjpeg($foto);
-            $x   = imagesx($img);
-            $y   = imagesy($img);
-            $altura = ($largura * $y)/$x;
-            $nova = imagecreatetruecolor($largura, $altura);
-            imagecopyresampled($nova, $img, 0, 0, 0, 0, $largura, $altura, $x, $y);
-            imagejpeg($nova, "$name",100);
-            imagedestroy($img);
-            imagedestroy($nova);
-            //return $name;
-            
-            echo "redimensionou";
+        $name="$destinobdd";
+        
+        $largura='800';
+        $img = imagecreatefromjpeg($foto);
+        $x   = imagesx($img);
+        $y   = imagesy($img);
+        $altura = ($largura * $y)/$x;
+        $nova = imagecreatetruecolor($largura, $altura);
+        imagecopyresampled($nova, $img, 0, 0, 0, 0, $largura, $altura, $x, $y);
+        imagejpeg($nova, "$name",100);
+        imagedestroy($img);
+        imagedestroy($nova);
+        return $name;
+        
+        echo "redimensionou";
           
         
         /////////////////////////////
