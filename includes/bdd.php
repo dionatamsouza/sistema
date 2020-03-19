@@ -316,21 +316,6 @@
   }
   //-----------------------------------------------------------------------------------
 
-  //Redimencionar imagem
-  function Redimensionarjpeg($imagemred, $name, $largura, $pasta){
-    $img = imagecreatefromjpeg($imagemred);
-    $x   = imagesx($img);
-    $y   = imagesy($img);
-    $altura = ($largura * $y)/$x;
-    $nova = imagecreatetruecolor($largura, $altura);
-    imagecopyresampled($nova, $img, 0, 0, 0, 0, $largura, $altura, $x, $y);
-    imagejpeg($nova, "$name",100);
-    imagedestroy($img);
-    imagedestroy($nova);
-    return $name;
-  }
-  //-----------------------------------------------------------------------------------
-
   //cadastrar imóvel
   if(isset($_POST['cadastrar-imovel'])) {
     $id_imovel = uniqid();
@@ -342,11 +327,29 @@
       $destino = $diretorio.$arquivo['name'][$controle];
       if(move_uploaded_file($arquivo['tmp_name'][$controle], $destino)) {
 
+        ///// REdimensionamento aqui /////
+        
         $nome=$arquivo['name'][$controle];
-        $foto="$destinobdd";
-        $name="$destinobdd";
-        $pasta="/$destino";
-        Redimensionarjpeg($foto, $name, 800, $pasta);
+        
+        $foto="../$destinobdd";
+          $name="../$destinobdd";
+          
+          $largura='800';
+          $img = imagecreatefromjpeg($foto);
+            $x   = imagesx($img);
+            $y   = imagesy($img);
+            $altura = ($largura * $y)/$x;
+            $nova = imagecreatetruecolor($largura, $altura);
+            imagecopyresampled($nova, $img, 0, 0, 0, 0, $largura, $altura, $x, $y);
+            imagejpeg($nova, "$name",100);
+            imagedestroy($img);
+            imagedestroy($nova);
+            //return $name;
+            
+            echo "redimensionou";
+          
+        
+        /////////////////////////////
 
         $cadinsert = "INSERT into fotos_imovel (id_imovel, file) VALUES (:id_imovel, :file)";
         try {
