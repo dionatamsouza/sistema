@@ -344,7 +344,7 @@
         imagejpeg($nova, "$name",100);
         imagedestroy($img);
         imagedestroy($nova);
-        return $name;
+        //return $name;
         
         echo "redimensionou";
           
