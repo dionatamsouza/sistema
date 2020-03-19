@@ -331,8 +331,8 @@
         
         $nome=$arquivo['name'][$controle];
         
-        echo $foto="/$destinobdd";
-          echo $name="/$destinobdd";
+        $foto="$destinobdd";
+          $name="$destinobdd";
           
           $largura='800';
           $img = imagecreatefromjpeg($foto);
