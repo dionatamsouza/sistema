@@ -330,7 +330,7 @@
         ///// REdimensionamento aqui /////
         
         $nome=$arquivo['name'][$controle];
-        
+        echo "<img src='$foto'>";
         $foto="./$destinobdd";
         $name="./$destinobdd";
         
